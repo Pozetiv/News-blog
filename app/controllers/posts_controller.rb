@@ -4,9 +4,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    @posts = Post.new
   end
 
   def show
+    @posts = Post.find(params[:id])
+
   end
 
   def update
