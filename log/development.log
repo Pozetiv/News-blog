@@ -190,3 +190,12 @@ Add `Rails.application.config.assets.precompile += %w( posts.css )` to `config/i
     11: <body>
   
 app/views/layouts/posts.html.erb:8:in `_app_views_layouts_posts_html_erb__398690825038898164_46931527382140'
+Started GET "/" for 127.0.0.1 at 2017-07-23 18:15:55 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (11.5ms)
+Completed 200 OK in 324ms (Views: 303.8ms | ActiveRecord: 1.2ms)
+
+
