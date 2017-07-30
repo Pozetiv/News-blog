@@ -3,8 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
-ul {
-  li {
-    text-decoration: none;
-  }
+
+html{
+  overflow-y: scroll;
+}
+body{
+  padding-top: 50px;
 }
