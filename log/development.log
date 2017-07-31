@@ -1137,3 +1137,841 @@ Migrating to CreateUsers (20170730192047)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-07-31 21:59:16 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (71.6ms)
+Completed 200 OK in 1298ms (Views: 1243.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 21:59:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Create new USERS FORM</h1>
+    2: <%= form_for @users do |f| %>
+    3:     <%= f.label :username %>
+    4:     <%= f.text_field :username %>
+    5:     <%= f.label :email %>
+  
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045635657760'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:00:05 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Create new USERS FORM</h1>
+    2: <%= form_for @user do |f| %>
+    3:     <%= f.label :username %>
+    4:     <%= f.text_field :username %>
+    5:     <%= f.label :email %>
+  
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045547915640'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:04:06 +0300
+Processing by UsersController#new as HTML
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:04:16 +0300
+Completed 500 Internal Server Error in 182ms
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007f697c7437d0>):
+  
+app/controllers/users_controller.rb:6:in `new'
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 181ms
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007f6988b14a38>):
+  
+app/controllers/users_controller.rb:6:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:04:40 +0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 206ms
+
+
+  
+NameError (undefined local variable or method `users' for #<UsersController:0x007f69804ab320>
+Did you mean?  users_url):
+  
+app/controllers/users_controller.rb:6:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:05:08 +0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NameError (uninitialized constant UsersController::Users):
+  
+app/controllers/users_controller.rb:6:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:05:09 +0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NameError (uninitialized constant UsersController::Users):
+  
+app/controllers/users_controller.rb:6:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:05:16 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Create new USERS FORM</h1>
+    2: <%= form_for @user do |f| %>
+    3:     <%= f.label :username %>
+    4:     <%= f.text_field :username %>
+    5:     <%= f.label :email %>
+  
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045628409080'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:05:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (99.5ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `passwod_field' for #<User:0x007f697c46de70>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :passwod_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045516653820'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045516653820'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:05:50 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f69801945d8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045548697700'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045548697700'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:06 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f698967e270>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045626775880'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045626775880'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:40 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f698a780b90>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045635705140'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045635705140'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:43 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f697c5bf2d8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045517344540'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045517344540'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:46 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f698035bfb0>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045549647080'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045549647080'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:47 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f69899e1cc8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045628550880'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045628550880'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:47 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f698a83e000>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045636093100'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045636093100'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:49 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f697c63f960>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045517607540'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045517607540'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:50 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f69803d2c28>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045549889760'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045549889760'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:51 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f6989a06c30>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045628617140'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045628617140'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:51 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f698a7e4c30>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045635902180'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045635902180'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:52 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f697c5b46d0>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045517306100'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045517306100'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:52 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f6980299528>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045549248600'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045549248600'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:52 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f69896320c8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045626611380'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045626611380'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:53 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f698a338240>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045633451720'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045633451720'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:54 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f697c307bd0>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045515919660'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045515919660'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:07:54 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x007f697c8e22a8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045518989060'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045518989060'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:09:16 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field' for #<User:0x00564f92632788>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password_field%>
+     8:     <%= f.text_field :password_field%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045550435440'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045550435440'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:13:05 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007f6988c7b188>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.text_field :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045620183380'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045620183380'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:13:07 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007f6989f841a8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.text_field :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045631165920'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045631165920'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:13:10 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007f698a98f8c8>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.text_field :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045636784640'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045636784640'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:13:11 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007f697c504910>):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.text_field :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045516954080'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045516954080'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:18:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (179.5ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x007f697c916710>
+Did you mean?  password_field):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.password_field_tag :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045447320720'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045447320720'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:18:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (240.1ms)
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x007f698a7705b0>
+Did you mean?  password_field):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.password_field_tag :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045634606820'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045634606820'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:18:36 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (169.4ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x007f698a0ecba8>
+Did you mean?  password_field):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.password_field_tag :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045632380340'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045632380340'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:18:36 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (164.3ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x007f6989fc7548>
+Did you mean?  password_field):
+     5:     <%= f.label :email %>
+     6:     <%= f.text_field :email %>
+     7:     <%= f.label :password%>
+     8:     <%= f.password_field_tag :password%>
+     9:     <%= f.submit 'Creat' %>
+    10: 
+    11: 
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__787801937893264721_70045631713260'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__787801937893264721_70045631713260'
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:18:57 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:20:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:21:21 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:21:22 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:27:05 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (2.4ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:30:20 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (31.5ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:30:21 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (33.3ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:30:21 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (35.5ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:29 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (50.1ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:29 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (41.3ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (36.7ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (31.4ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (24.5ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (31.6ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (36.8ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (30.2ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (32.0ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (26.4ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (31.5ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (35.3ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (43.4ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (27.7ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (30.7ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (34.1ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (41.3ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:33 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (35.7ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:33 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (36.3ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (30.1ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-31 22:34:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (28.9ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
