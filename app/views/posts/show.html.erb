@@ -1,5 +1,8 @@
 <h1>SHow page</h1>
 <h2><%= @posts.title %> </h2>
+<div class="image">
+  <%= image_tag @posts.image.url(:big), class: 'img-show' if @posts.image? %>
+</div>
 <%= @posts.body %>
 <h2>Comments</h2>
 <div id="disqus_thread"></div>

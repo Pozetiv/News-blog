@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
-  has_many :comment
   validates :title, :doby, presence: true
+  mount_uploaders :image, ImageUploader
+  serialize :image, JSON
 end
