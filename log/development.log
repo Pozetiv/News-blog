@@ -1975,3 +1975,2220 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20170805194137)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170805194137"]]
+  [1m[35m (144.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:05:06 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/roman/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/roman/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (31.6ms)
+Completed 200 OK in 205ms (Views: 136.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:06:06 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NameError (undefined local variable or method `d' for main:Object):
+  
+app/models/post.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:07:38 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 50ms
+
+
+  
+ArgumentError (Unknown validator: 'EniquenessValidator'):
+  
+app/models/post.rb:4:in `<class:Post>'
+app/models/post.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:07:40 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+ArgumentError (Unknown validator: 'EniquenessValidator'):
+  
+app/models/post.rb:4:in `<class:Post>'
+app/models/post.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:07:50 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 17ms
+
+
+  
+ArgumentError (Unknown validator: 'EniquenessValidator'):
+  
+app/models/post.rb:4:in `<class:Post>'
+app/models/post.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:07:51 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+ArgumentError (Unknown validator: 'EniquenessValidator'):
+  
+app/models/post.rb:4:in `<class:Post>'
+app/models/post.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:08:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (17.1ms)
+Completed 200 OK in 840ms (Views: 784.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:09:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.7ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2017-08-05 23:09:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-05 23:09:27 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.1ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post/show/1" for 127.0.0.1 at 2017-08-05 23:09:38 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/post/show/1"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/new" for 127.0.0.1 at 2017-08-05 23:09:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:10:47 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:11:52 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:11:54 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:11:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:11:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:11:56 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:11:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:16 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:47 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:12:48 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:21 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:21 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:22 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:22 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:23 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:23 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (6.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885131641420'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:56 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885137882360'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (7.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884995461080'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:13:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885132786860'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:33 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885057060280'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:34 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884994917680'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:34 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885132898680'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884994964640'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884996436360'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885132051820'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:36 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885138687160'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:18:37 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comment.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884856296480'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:43 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885130474780'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885138619540'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885027716980'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:45 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (18.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_47432701310140'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:45 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885136301360'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:45 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885136093280'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884995184100'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:19:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885132074420'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:20:00 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885139116820'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:20:01 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885027706860'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:20:01 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884995371600'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:20:02 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885134292640'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:20:02 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885137935040'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:20:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884857086400'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:28 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884996125820'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:29 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (7.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884855878220'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:30 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885136470720'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:30 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884994488180'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:31 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885028020360'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:31 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884995363220'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:31 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885132721740'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (8.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885138233100'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885135230700'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:33 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885028337320'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:33 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (6.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884994321700'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:33 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885131109940'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:34 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885135930520'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:34 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885139171520'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:24:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>ADD Comment</h2>
+    5: <%= form_for ([@post, @post.comments.build]) do |f| %>
+    6: <p>
+    7:   <%= f.label :author %>
+    8:   <%= f.text_field :author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885024647240'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:11 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884856677760'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:12 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69884995935520'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:13 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885023673780'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:13 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (9.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885133243660'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:14 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885136494540'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:15 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885138651480'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-05 23:30:16 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (6.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb___2087089749564340590_69885135994940'
+Started GET "/" for 127.0.0.1 at 2017-08-06 07:43:44 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (30.9ms)
+Completed 200 OK in 479ms (Views: 419.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:44:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (18.1ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205669978100'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:02 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205838516100'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:15 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205788573960'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:17 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205674447060'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (6.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205787190480'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:22 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (7.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205673607720'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:23 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205784033120'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:48:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205672888060'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:27 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205839966880'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:29 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205670626420'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:29 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (6.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205837517520'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:30 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (8.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205787735900'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:30 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205673572580'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:31 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205783330960'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205672347080'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205840476580'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:49:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (8.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comment.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205670752740'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:05 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205673606760'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:06 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205782900280'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:06 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205671839620'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205839350280'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205788545260'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205673577740'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:53:08 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205782463440'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:59:39 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205670166160'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:59:40 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205673915320'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 07:59:41 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    2: <h2><%= @posts.title %> </h2>
+    3: <%= @posts.body %>
+    4: <h2>Comments</h2>
+    5: <%@post.comments.each do |comment| %>
+    6:     <p>
+    7:       <h3>author:</h3>
+    8:       <%= comment.author %>
+  
+app/views/posts/show.html.erb:5:in `_app_views_posts_show_html_erb__1677605205576206829_70205782782540'
+Started GET "/" for 127.0.0.1 at 2017-08-06 11:23:56 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.1ms)
+Completed 200 OK in 397ms (Views: 362.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:24:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/home/roman/RubymineProjects/News-blog/app/views/posts/show.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/posts/show.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:24:30 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.6ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:31:39 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.2ms)
+Completed 200 OK in 250ms (Views: 217.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:31:43 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.6ms)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:31:45 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 200 OK in 44ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:31:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:51:15 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (9.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8: 
+     9:     var disqus_config = function () {
+    10:     this.page.url = 'http://localhost.net<%= request.original_fullpath %> ' // Replace PAGE_URL with your page's canonical URL variable
+    11:     this.page.identifier ='<%= @post.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    12:     };
+    13: 
+    14:     (function() { // DON'T EDIT BELOW THIS LINE
+  
+app/views/posts/show.html.erb:11:in `_app_views_posts_show_html_erb___3337184601930279030_70329084153520'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:51:16 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8: 
+     9:     var disqus_config = function () {
+    10:     this.page.url = 'http://localhost.net<%= request.original_fullpath %> ' // Replace PAGE_URL with your page's canonical URL variable
+    11:     this.page.identifier ='<%= @post.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    12:     };
+    13: 
+    14:     (function() { // DON'T EDIT BELOW THIS LINE
+  
+app/views/posts/show.html.erb:11:in `_app_views_posts_show_html_erb___3337184601930279030_70329130506820'
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:51:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.6ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-08-06 11:52:49 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-08-06 11:53:12 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:53:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-08-06 11:53:23 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-08-06 11:53:31 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.6ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2017-08-06 11:53:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:53:42 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.5ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-08-06 11:57:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.7ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
