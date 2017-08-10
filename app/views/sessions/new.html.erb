@@ -1,0 +1,11 @@
+<h1>This page for LOG IN</h1>
+<div class="Form_style">
+<%= form_rof (:session, url: session_path) do [f] %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.submit "Sing IN", class: "btn btn-default"%>
+</div>
+<% end %>
+<%= link_to 'Main page', "/"%>

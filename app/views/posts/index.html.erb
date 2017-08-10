@@ -1,8 +1,8 @@
 <h1> This's main page site </h1>
 <% @posts.each do |post| %>
-<div id="minipost">
-  <h2><%= link_to post.title, post_path(post) %> </h2>
-  <%= image_tag @posts.image.url(:thumb), class: 'img clearfix' if @posts.image? %>
+<div id="page-header">
+  <h1><%= link_to post.title, post_path(post)%></h1>
+
 <small>
   <time><%= post.created_at.to_date.strftime("%d %B %Y")%></time>
 <%= link_to 'Read the entire news', "#" %>
