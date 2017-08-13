@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_secure_password
  # validates :username, :email, :password, presence: true
   #validates :password, length: {in: 4..16}, massage: "Password must be with length min 4 unite"
   #validates :username, length: {minimum: 3}
