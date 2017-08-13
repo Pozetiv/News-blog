@@ -5030,3 +5030,1338 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-12 22:11:19 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (20.8ms)
+Completed 200 OK in 4160ms (Views: 4093.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-08-12 22:13:03 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+r.append=( form_rof (:session, url: session_path) do [f] );@
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+n, url: session_path) do [f] );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+app/views/sessions/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:18:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:18:38 +0300
+  
+SyntaxError (/home/roman/News-blog/config/routes.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+ "/singin", 'sessions#new' via: 'get'
+                              ^):
+  
+config/routes.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:18:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:18:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:18:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:18:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:19:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:19:38 +0300
+  
+SyntaxError (/home/roman/News-blog/config/routes.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+ '/singin', 'sessions#new' via: 'get'
+                              ^):
+  
+config/routes.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/singin" for 127.0.0.1 at 2017-08-12 22:26:09 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+r.append=( form_rof (:session, url: session_path) do [f] );@
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+n, url: session_path) do [f] );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+app/views/sessions/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-08-13 10:36:05 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.7ms)
+Completed 200 OK in 1808ms (Views: 1751.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:36:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+r.append=( form_rof (:session, url: session_path) do [f] );@
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+n, url: session_path) do [f] );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+app/views/sessions/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:38:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:39:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:39:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:39:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:39:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:39:28 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+r.append=  form_for {:session, url: singin_path} do |f| @out
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:2: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:40:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:3: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:40:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:3: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:3: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 447ms (Views: 445.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:56 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:58 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:42:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:44:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+r.append=( form_for {:session, url: singin_path} );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting '}'
+app/views/sessions/new.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:02 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:03 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:04 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:04 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:23 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:23 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+r.append=( form_for (:session, url: singin_path) );@output_b
+                              ^
+/home/roman/News-blog/app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:46:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:49:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (257.1ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `submite' for #<ActionView::Helpers::FormBuilder:0x007f2611fcc0e0>
+Did you mean?  submit):
+    3: <%=f.text_field :username%>
+    4: <%= f.label :password%>
+    5: <%= f.password_field :password%>
+    6: <%= f.submite 'SINGIN'%>
+    7: <%end%>
+  
+app/views/sessions/new.html.erb:6:in `block in _app_views_sessions_new_html_erb___4242255870912248672_69900743683240'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb___4242255870912248672_69900743683240'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:50:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (181.4ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `submite' for #<ActionView::Helpers::FormBuilder:0x007f26120dcc50>
+Did you mean?  submit):
+    3: <%=f.text_field :username%>
+    4: <%= f.label :password%>
+    5: <%= f.password_field :password%>
+    6: <%= f.submite "SINGIN"%>
+    7: <%end%>
+  
+app/views/sessions/new.html.erb:6:in `block in _app_views_sessions_new_html_erb___4242255870912248672_69900743700540'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb___4242255870912248672_69900743700540'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:50:08 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (176.7ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `submite' for #<ActionView::Helpers::FormBuilder:0x007f2604019d30>
+Did you mean?  submit):
+    3: <%=f.text_field :username%>
+    4: <%= f.label :password%>
+    5: <%= f.password_field :password%>
+    6: <%= f.submite "SINGIN"%>
+    7: <%end%>
+  
+app/views/sessions/new.html.erb:6:in `block in _app_views_sessions_new_html_erb___4242255870912248672_69900626503240'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb___4242255870912248672_69900626503240'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:50:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:52:08 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_class, expecting ')'
+pend=( f.submit "SINGIN" class: "btn btn-default");@output_b
+                              ^):
+  
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_class, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:52:39 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_class, expecting ')'
+pend=( f.submit "SINGIN" class: "btn btn-default");@output_b
+                              ^):
+  
+app/views/sessions/new.html.erb:8: syntax error, unexpected keyword_class, expecting ')'
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:52:43 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:53:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:53:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:53:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:54:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:56:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 10:56:22 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 10:56:22 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.4ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:56:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-13 10:56:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+

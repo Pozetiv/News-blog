@@ -1,11 +1,12 @@
-<h1>This page for LOG IN</h1>
-<div class="Form_style">
-<%= form_rof (:session, url: session_path) do [f] %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.submit "Sing IN", class: "btn btn-default"%>
+<div class="row">
+<div class="col-md-offset-3 col-md-6 ">
+<%=form_for(:session, url: singin_path) do |f| %>
+<%=f.label :username %>
+<%=f.text_field :username, class: "form-control"%>
+<%= f.label :password%>
+<%= f.password_field :password, class: "form-control"%>
+<%= f.submit "SINGIN", class: "btn btn-default"%>
+<%end%>
+<%=link_to 'Back to main page', "/"  %>
 </div>
-<% end %>
-<%= link_to 'Main page', "/"%>
+</div>
