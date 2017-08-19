@@ -3,11 +3,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find(params[:id])
-    if user && user.authenticate(params[:id])
+    render 'new'
+    user = User.find_by(username: params[:session][:username])
+    if user && user.authenticate(params[:session][:password])
+      log_in user
+      redirect_to user
     else
-      flash[:error] = 'Invalide date username or password'
-      render 'new'
+      flash.now[:error] = 'Invalide date username or password'
+      
     end
   end
 

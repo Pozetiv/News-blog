@@ -33,7 +33,11 @@
   </div>
 </header>
 <div class="container">
+<% flash.each do |massage_type, massage| %>
+  <div class="alert alert- <%= massage_type %>"><%= massage %></div>
+  <% end %>
 <%= yield %>
+
 </div>
 <footer>
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -43,6 +47,9 @@
   <div class="col-md-4 text-center"><%= link_to "Rules POSTeR", '' %></div>
 </div>
     </div>
+  </div>
+  <div class="container">
+    <%= debug(params) if Rails.env.development? %>
   </div>
 </footer>
 </body>
