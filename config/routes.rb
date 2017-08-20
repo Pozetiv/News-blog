@@ -8,7 +8,7 @@ resources :pictures, only: [:create, :destroy]
 resources :posts 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-get '/singin', to: 'sessions#new'
+get '/singin', to: 'sessions#new' 
 #post '/singin', to: 'sessions#create'
-
-  end
+#delete  '/logout' to: 'sessions#destroy'
+end

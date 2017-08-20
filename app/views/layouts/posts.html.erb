@@ -23,10 +23,13 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-
           <li><%= link_to "Site CHAT", '#', class: 'btn dtn-default navbar-btn' %></li>
-          <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+          <%if logged_in? %>
+           <li><%= link_to "Logout", '#', method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+           <% else %>
+           <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+           <% end %>
         </ul>
     </div>
     </div>

@@ -3,17 +3,20 @@ class SessionsController < ApplicationController
   end
 
   def create
-    render 'new'
     user = User.find_by(username: params[:session][:username])
     if user && user.authenticate(params[:session][:password])
       log_in user
       redirect_to user
     else
-      flash.now[:error] = 'Invalide date username or password'
+      flash.now[:danger] = 'Invalide date username or password'
+      render 'new' 
       
     end
   end
+  
 
   def destroy
+    logout
+    redirect_to root_url
   end
 end
