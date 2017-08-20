@@ -13560,3 +13560,1856 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRememberDigestToUsers (20170820144027)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_digest" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "string" varchar[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170820144027"]]
+  [1m[35m (172.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-08-20 21:45:59 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.6ms)
+  [1m[36mUser Load (46.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 6110ms (Views: 6020.3ms | ActiveRecord: 49.4ms)
+
+
+Started GET "/user/update%201" for 127.0.0.1 at 2017-08-20 21:46:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/update%201"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:01:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-20 22:01:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (97.1ms)
+Completed 200 OK in 227ms (Views: 211.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-20 22:01:30 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-20 22:01:36 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WY+5AWdOj/lfE+vAztfDxC8w/X4yF6NxIVa2L6vWjwHJMO8OkUPkGw8f78oBeGLG+5BBgcTCSS5BePD2OSp3CQ==", "session"=>{"username"=>"sa", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sa"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 96ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-20 22:01:45 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r7nWTJSSwy9NSS5Q/GEXd91DZt1JRlLTeWsc3eh527I/BoBDYp+ozR1FKlozzrZ1CePaIr+TuIwZRVoEeoUjug==", "session"=>{"username"=>"pozetiv", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pozetiv"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 140ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-20 22:01:46 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.7ms)
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-20 22:01:55 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.5ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:01:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:02:03 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/edit.html.erb within layouts/users (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+er.new; provide (:button_text, 'SAVE changes')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+(:button_text, 'SAVE changes')
+                              ^):
+  
+app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:03:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:03:14 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/edit.html.erb within layouts/users (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+er.new; provide (:button_text, 'SAVE')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+provide (:button_text, 'SAVE')
+                              ^):
+  
+app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:03:43 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/edit.html.erb within layouts/users (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+er.new; provide (:button_text, 'SAVE')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+provide (:button_text, 'SAVE')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/users/edit.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:07:23 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/edit.html.erb within layouts/users (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+er.new; provide (:button_text, 'SAVE')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+provide (:button_text, 'SAVE')
+                              ^):
+  
+app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:07:24 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/edit.html.erb within layouts/users (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+er.new; provide (:button_text, 'SAVE')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+provide (:button_text, 'SAVE')
+                              ^):
+  
+app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:07:25 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/edit.html.erb within layouts/users (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+er.new; provide (:button_text, 'SAVE')
+                              ^
+/home/roman/News-blog/app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+provide (:button_text, 'SAVE')
+                              ^):
+  
+app/views/users/edit.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:08:27 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/users (3.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+ssword, class: 'form-control'c);@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324723004500'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:24 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/users (3.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+ssword, class: 'form-control'c);@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324460017700'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:25 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/users (2.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+ssword, class: 'form-control'c);@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324708445300'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:25 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/users (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+ssword, class: 'form-control'c);@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324704745000'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:25 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/edit.html.erb within layouts/users (6.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+ssword, class: 'form-control'c);@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324723036620'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:26 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/users (2.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+ssword, class: 'form-control'c);@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324460018460'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:39 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/users (5.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324708421740'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:40 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/users (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324704896320'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:41 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/users (5.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324723553100'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:11:42 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/users (2.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+fer.append=( f.submit yeild (: button_text)  class: 'btn btn
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+t)  class: 'btn btn-default' );@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected ':'
+app/views/users/_form.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324821634440'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:12:17 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/users (2.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected tLABEL, expecting ')'
+it yeild(:button_text)  class: 'btn btn-default' );@output_b
+                              ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324708713160'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:12:18 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/users (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected tLABEL, expecting ')'
+it yeild(:button_text)  class: 'btn btn-default' );@output_b
+                              ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324705911300'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:12:19 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/users (4.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected tLABEL, expecting ')'
+it yeild(:button_text)  class: 'btn btn-default' );@output_b
+                              ^):
+  
+app/views/users/_form.html.erb:14: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324725276380'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:12:55 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/edit.html.erb within layouts/users (7.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324824370820'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324824402000'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:12:57 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/users (2.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324713995780'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324714027280'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:12:57 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/users (5.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324703839620'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324706943220'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:19 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/users (7.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324695970180'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324696071300'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:21 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/edit.html.erb within layouts/users (5.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324655115380'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324655171800'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:21 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/users (4.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324712731160'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324458709080'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:22 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/users (2.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324708886240'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324708901880'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:22 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/users (2.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324705940740'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324705955340'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:23 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/edit.html.erb within layouts/users (6.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324822521060'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324822543860'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:23 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/users (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324713998060'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324454203560'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:13:24 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/users (2.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for (@user) do |f| %>
+    2: 
+    3: <%=render 'shared/errors_massages', object: @user %>
+    4: 
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324452866840'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324453577920'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:14:40 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (31.6ms)
+  Rendered users/edit.html.erb within layouts/users (32.8ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324703239620'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324703239620'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324703258040'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:14:42 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (8.7ms)
+  Rendered users/edit.html.erb within layouts/users (9.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324824958840'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324824958840'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324822278320'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:10 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/users (2.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324821659800'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:11 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/users (2.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324708797060'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:12 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/users (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324705523560'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:12 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/users (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324724280680'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:13 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/users (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/users/_form.html.erb:17: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324822153880'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:44 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.0ms)
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/edit.html.erb within layouts/users (8.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324709044660'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324709044660'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324709149940'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:15:45 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/edit.html.erb within layouts/users (9.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324699035180'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324699035180'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324699155160'
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:16:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (15.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 49.2ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2017-08-20 22:16:09 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:16:24 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.5ms)
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/edit.html.erb within layouts/users (4.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324821659900'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324821659900'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324821716380'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:17:26 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (2.2ms)
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/edit.html.erb within layouts/users (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+er.safe_append=' '.freeze; end ;
+                              ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707453220'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707453220'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707470560'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:17:28 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (5.7ms)
+  Rendered users/edit.html.erb within layouts/users (7.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+er.safe_append=' '.freeze; end ;
+                              ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324825654180'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324825654180'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324825693500'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:15 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (3.8ms)
+  Rendered users/_form.html.erb (7.3ms)
+  Rendered users/edit.html.erb within layouts/users (8.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324821914880'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324821914880'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324821955060'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:16 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.0ms)
+  Rendered users/_form.html.erb (4.9ms)
+  Rendered users/edit.html.erb within layouts/users (6.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707546900'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707546900'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707562100'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:17 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.3ms)
+  Rendered users/_form.html.erb (23.0ms)
+  Rendered users/edit.html.erb within layouts/users (24.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_47164528451480'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_47164528451480'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_47164536848220'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:17 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/edit.html.erb within layouts/users (9.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324823166340'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324823166340'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324823320480'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:18 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.1ms)
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/users (3.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707970960'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707970960'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707985640'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:19 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.0ms)
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/users (6.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_47164548794600'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_47164548794600'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_47164549096000'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:18:19 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.4ms)
+  Rendered users/_form.html.erb (5.9ms)
+  Rendered users/edit.html.erb within layouts/users (7.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324824239180'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324824239180'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324824291880'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:01 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/edit.html.erb within layouts/users (5.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;	 else
+         	     ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324708146400'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324708146400'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324708161760'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:02 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.1ms)
+  Rendered users/_form.html.erb (6.2ms)
+  Rendered users/edit.html.erb within layouts/users (7.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;	 else
+         	     ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_47164549675360'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_47164549675360'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_47164549983800'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:15 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.2ms)
+  Rendered users/_form.html.erb (8.7ms)
+  Rendered users/edit.html.erb within layouts/users (11.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;	 else
+         	     ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324888614660'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324888614660'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324823748920'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:16 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (2.8ms)
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/edit.html.erb within layouts/users (8.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;	 else
+         	     ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707908780'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707908780'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707924200'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:19 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.1ms)
+  Rendered users/_form.html.erb (21.1ms)
+  Rendered users/edit.html.erb within layouts/users (23.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;	 else
+         	     ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:7: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_47164535499940'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_47164535499940'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_47164537235920'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:26 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (5.4ms)
+  Rendered users/edit.html.erb within layouts/users (6.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324822216340'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324822216340'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324822315680'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:27 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.0ms)
+  Rendered users/_form.html.erb (7.4ms)
+  Rendered users/edit.html.erb within layouts/users (8.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707539480'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707539480'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707556380'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:28 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (4.0ms)
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/edit.html.erb within layouts/users (6.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shared/_errors_massages.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324825910200'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324825910200'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324825949740'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:35 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (2.2ms)
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/users (6.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324822195920'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324822195920'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324822313540'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:35 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (1.5ms)
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/users (5.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707498520'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707498520'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707526860'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:36 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.8ms)
+  Rendered users/_form.html.erb (6.7ms)
+  Rendered users/edit.html.erb within layouts/users (8.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324825614260'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324825614260'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324825688380'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:36 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/edit.html.erb within layouts/users (6.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324821834060'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324821834060'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324821891320'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:37 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (0.9ms)
+  Rendered users/_form.html.erb (6.8ms)
+  Rendered users/edit.html.erb within layouts/users (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707373220'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707373220'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707333500'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:19:37 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered shared/_errors_massages.html.erb (2.4ms)
+  Rendered users/_form.html.erb (4.9ms)
+  Rendered users/edit.html.erb within layouts/users (6.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/roman/News-blog/app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/shared/_errors_massages.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/_errors_massages.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_form.html.erb:3:in `block in _app_views_users__form_html_erb__4517747053779672308_70324824151420'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324824151420'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324824503600'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:20:10 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/users (4.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/_form.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+_field :username, class: 'form-control');@output_buffer.safe
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+sername, class: 'form-control');@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:7: syntax error, unexpected ',', expecting ')'
+/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+_field :password, class: 'form-control');@output_buffer.safe
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+assword, class: 'form-control');@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+ext.field :email, class: 'form-control' );@output_buffer.saf
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ :email, class: 'form-control' );@output_buffer.safe_append=
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+ld(:button_text),  class: 'btn btn-default' );@output_buffer
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+xt),  class: 'btn btn-default' );@output_buffer.safe_append=
+                              ^
+/home/roman/News-blog/app/views/users/_form.html.erb:15: unterminated string meets end of file
+/home/roman/News-blog/app/views/users/_form.html.erb:15: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/users/_form.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/users/_form.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/users/_form.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/users/_form.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/users/_form.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/users/_form.html.erb:15: unterminated string meets end of file
+app/views/users/_form.html.erb:15: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324460129400'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:20:40 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (199.9ms)
+  Rendered users/edit.html.erb within layouts/users (201.3ms)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x007feb7e65bca8>):
+     8: <%= f.password_field :password, class: 'form-control'%>
+     9: 
+    10: <%= f.label :email %> 
+    11: <%= f.text.field :email, class: 'form-control' %>
+    12: 
+    13: <%= f.submit yeild(:button_text),  class: 'btn btn-default' %>
+    14: <%end %>
+  
+app/views/users/_form.html.erb:11:in `block in _app_views_users__form_html_erb__4517747053779672308_70324707369240'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324707369240'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324707331820'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:20:43 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (177.4ms)
+  Rendered users/edit.html.erb within layouts/users (178.9ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x007feb7ebe2fc8>):
+     8: <%= f.password_field :password, class: 'form-control'%>
+     9: 
+    10: <%= f.label :email %> 
+    11: <%= f.text.field :email, class: 'form-control' %>
+    12: 
+    13: <%= f.submit yeild(:button_text),  class: 'btn btn-default' %>
+    14: <%end %>
+  
+app/views/users/_form.html.erb:11:in `block in _app_views_users__form_html_erb__4517747053779672308_70324710272940'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324710272940'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324710337080'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:20:45 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (307.6ms)
+  Rendered users/edit.html.erb within layouts/users (310.9ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x007feb7e515dd0>):
+     8: <%= f.password_field :password, class: 'form-control'%>
+     9: 
+    10: <%= f.label :email %> 
+    11: <%= f.text.field :email, class: 'form-control' %>
+    12: 
+    13: <%= f.submit yeild(:button_text),  class: 'btn btn-default' %>
+    14: <%end %>
+  
+app/views/users/_form.html.erb:11:in `block in _app_views_users__form_html_erb__4517747053779672308_70324706672540'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324706672540'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324706638160'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:21:13 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (315.4ms)
+  Rendered users/edit.html.erb within layouts/users (316.7ms)
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `yeild' for #<#<Class:0x007feb7de9c288>:0x007feb7fc1c290>):
+    10: <%= f.label :email %> 
+    11: <%= f.text_field :email, class: 'form-control' %>
+    12: 
+    13: <%= f.submit yeild(:button_text),  class: 'btn btn-default' %>
+    14: <%end %>
+  
+app/views/users/_form.html.erb:13:in `block in _app_views_users__form_html_erb__4517747053779672308_70324719324200'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__4517747053779672308_70324719324200'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb___4209450811024470627_70324718724700'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:21:36 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/edit.html.erb within layouts/users (4.7ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2017-08-20 22:22:01 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xS5/w7OoBRZzM8TvMRE17mhOV3u+lYtatru5nn5IbZlVkSnMRaVu9CM/wOX+vpTsvO7rhEhAYQXWlf9H7LSVkQ==", "user"=>{"username"=>"pozetiv1", "password"=>"[FILTERED]", "email"=>"pozetivteam@gmail.com"}, "commit"=>"SAVE", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `permite' for #<ActionController::Parameters:0x007feb8c69c3f8>
+Did you mean?  permit
+               permit!):
+  
+app/controllers/users_controller.rb:45:in `user_params'
+app/controllers/users_controller.rb:26:in `update'
+Started PATCH "/users/1" for 127.0.0.1 at 2017-08-20 22:22:59 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xS5/w7OoBRZzM8TvMRE17mhOV3u+lYtatru5nn5IbZlVkSnMRaVu9CM/wOX+vpTsvO7rhEhAYQXWlf9H7LSVkQ==", "user"=>{"username"=>"pozetiv1", "password"=>"[FILTERED]", "email"=>"pozetivteam@gmail.com"}, "commit"=>"SAVE", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "pozetiv1"], ["password_digest", "$2a$10$w72qoG77N4YqztdZWcwDUezaDpMKTeI7eXi5T1nYNg/k8.d6MB/Ea"], ["updated_at", "2017-08-20 19:22:59.921721"], ["id", 1]]
+  [1m[35m (256.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 416ms (ActiveRecord: 259.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-20 22:23:00 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.6ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-20 22:23:05 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.6ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:23:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 47.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:23:12 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/edit.html.erb within layouts/users (7.0ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2017-08-20 22:23:22 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AQrp39aXFYPN5BGiRBrQUOEy+NFPtyBq4v9bsiE1VI8u932WTetuvQbpqWqHB/av3DaPBn9075InN6Cv/aVtkw==", "user"=>{"username"=>"pozetiv", "password"=>"[FILTERED]", "email"=>"pozetivteam@gmail.com"}, "commit"=>"SAVE", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "pozetiv"], ["password_digest", "$2a$10$wTe5dtMMA9Irl8.gKKLQjeTqwa/xN5MNRfrnLkXCW07Os5wilF3lq"], ["updated_at", "2017-08-20 19:23:22.847623"], ["id", 1]]
+  [1m[35m (245.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 381ms (ActiveRecord: 246.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-20 22:23:23 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.7ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-20 22:24:12 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.5ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:24:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-20 22:24:15 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/users (5.4ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:24:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
