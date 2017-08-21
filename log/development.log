@@ -15413,3 +15413,977 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:50:42 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (19.0ms)
+Completed 500 Internal Server Error in 1771ms (ActiveRecord: 2.5ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/sessions_helper.rb:7:in `current_user'
+app/helpers/sessions_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___911613558563400150_69860500764440'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:20 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.9ms)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 1.6ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291137746240'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:22 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291144208800'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291153123940'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291153579760'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:24 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291153945040'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291154176180'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:26 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.6ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+e_actiion :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291154294380'
+Started GET "/" for 127.0.0.1 at 2017-08-21 20:59:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.6ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 2.5ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+re_action :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/users_helper.rb:7:in `current_user'
+app/helpers/users_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb___878230112471469721_70291152462640'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:00:24 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (12.5ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+re_action :logged_in_user only: [:edit, :update]
+                              ^):
+  
+app/models/user.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/helpers/sessions_helper.rb:7:in `current_user'
+app/helpers/sessions_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb__2801107314702226526_47339126989020'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:01:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (16.6ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `before_action' for #<Class:0x007f4f92b77d28>
+Did you mean?  before_commit):
+    25:         <ul class="nav navbar-nav navbar-right">
+    26:           <li><%= link_to "Site CHAT", '#', class: 'btn dtn-default navbar-btn' %></li>
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", '#', method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:7:in `current_user'
+app/helpers/sessions_helper.rb:11:in `logged_in?'
+app/views/layouts/posts.html.erb:28:in `_app_views_layouts_posts_html_erb__2801107314702226526_69989864221860'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:06:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.3ms)
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 74.5ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-08-21 21:06:52 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/singin
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-21 21:06:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (162.4ms)
+Completed 200 OK in 398ms (Views: 381.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-21 21:07:03 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g2n7Zf5ECK4NNHLBCH4bPzGGUmcKTTSEsasu1jcrxpE+MM63LTlNmCpjKXo0EVGg/VUKs2FBcUgONKH13x05VQ==", "session"=>{"username"=>"sad", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sad"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 120ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-21 21:07:12 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R2yXoen1+UpYKQt2OII5M3HLe/mdynKfWcsJ/5fopEj6NaJzOoi8fH9+UM0E7XOsvRgjLfbGN1PmVIbcf95bjA==", "session"=>{"username"=>"pozetiv", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pozetiv"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 185ms (Views: 42.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-21 21:07:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tVSpZ+bq0jXx0EM+gVCBGyCc2+mVQQGyHxGvg9NFeckIDZy1NZeXA9aHGIW9P8uE7E+DPf5NRH6gjiCgO3OGDQ==", "session"=>{"username"=>"pozetiv", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pozetiv"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 177ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-21 21:07:28 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UqSXw4qHU0vENuSqgZEJIkTNDKewanL5FLBzIU/F913v/aIRWfoWfeNhvxG9/kO9iB5Uc9tmNzWrL/wCp/MImQ==", "session"=>{"username"=>"pozetiv", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pozetiv"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 124ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-21 21:07:28 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.6ms)
+Completed 200 OK in 96ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:07:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2017-08-21 21:07:35 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:19:50 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 84.8ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2017-08-21 21:19:54 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:19:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2017-08-21 21:20:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2017-08-21 21:20:55 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered users/new.html.erb within layouts/users (99.6ms)
+Completed 200 OK in 167ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-21 21:21:20 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpU1n2ok1HeCnPDxMF+wSCZG01DTIFYbFU1iACZOffXDzABNuVmRQaXLq0oMMPrX6pWLhLgsE9eq0u0jzniCMQ==", "user"=>{"username"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"CREATE"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "test"], ["email", "test@test.com"], ["created_at", "2017-08-21 18:21:20.704651"], ["updated_at", "2017-08-21 18:21:20.704651"], ["password_digest", "$2a$10$KbS8OG.8aEM63cnyn1QdPe5LB2oFIaHYDEEE31IN/DBE35wFCAW2G"]]
+  [1m[35m (255.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 400ms (ActiveRecord: 275.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-08-21 21:21:20 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.5ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:21:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (15.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 82.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2017-08-21 21:26:12 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/users
+  Rendered users/_form.html.erb (6.1ms)
+  Rendered users/edit.html.erb within layouts/users (32.0ms)
+Completed 200 OK in 101ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:26:15 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:39:28 +0300
+  
+SyntaxError (/home/roman/News-blog/app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:39:29 +0300
+  
+SyntaxError (/home/roman/News-blog/app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:39:29 +0300
+  
+SyntaxError (/home/roman/News-blog/app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:39:29 +0300
+  
+SyntaxError (/home/roman/News-blog/app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:39:30 +0300
+  
+SyntaxError (/home/roman/News-blog/app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/helpers/sessions_helper.rb:30: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/posts_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:40:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 67.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:48:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 66.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:48:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (12.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 21:48:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:48:13 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  Rendered users/index.html.erb within layouts/users (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/users/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/users/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:48:42 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (13.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User::ActiveRecord_Relation:0x007f4f883f05f0>):
+    2: <ul>
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<%=@user.username %>
+    6: 		<%= link_to user_path(user) %>
+    7: 	</li>
+    8: </ul>
+  
+app/views/users/index.html.erb:5:in `block in _app_views_users_index_html_erb__4457572361052314531_69989782468720'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989782468720'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:48:43 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (14.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User::ActiveRecord_Relation:0x00561bffc1f360>):
+    2: <ul>
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<%=@user.username %>
+    6: 		<%= link_to user_path(user) %>
+    7: 	</li>
+    8: </ul>
+  
+app/views/users/index.html.erb:5:in `block in _app_views_users_index_html_erb__4457572361052314531_47339127474480'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_47339127474480'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:48:43 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (13.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User::ActiveRecord_Relation:0x007f4f916127d0>):
+    2: <ul>
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<%=@user.username %>
+    6: 		<%= link_to user_path(user) %>
+    7: 	</li>
+    8: </ul>
+  
+app/views/users/index.html.erb:5:in `block in _app_views_users_index_html_erb__4457572361052314531_69989859081340'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989859081340'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:48:44 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (13.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User::ActiveRecord_Relation:0x007f4f91ceec70>):
+    2: <ul>
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<%=@user.username %>
+    6: 		<%= link_to user_path(user) %>
+    7: 	</li>
+    8: </ul>
+  
+app/views/users/index.html.erb:5:in `block in _app_views_users_index_html_erb__4457572361052314531_69989862678320'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989862678320'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:48:45 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (16.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User::ActiveRecord_Relation:0x007f4f925292a0>):
+    2: <ul>
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<%=@user.username %>
+    6: 		<%= link_to user_path(user) %>
+    7: 	</li>
+    8: </ul>
+  
+app/views/users/index.html.erb:5:in `block in _app_views_users_index_html_erb__4457572361052314531_69989866971020'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989866971020'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:37 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (4.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<
+    6: 		<%= link_to user.username user_path(user) %>
+    7: 	</li>
+    8: </ul>
+    9: <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__4457572361052314531_69989869380540'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989869380540'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:39 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (4.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<
+    6: 		<%= link_to user.username user_path(user) %>
+    7: 	</li>
+    8: </ul>
+    9: <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__4457572361052314531_69989782665940'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989782665940'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:40 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (4.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<
+    6: 		<%= link_to user.username user_path(user) %>
+    7: 	</li>
+    8: </ul>
+    9: <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__4457572361052314531_47339127475560'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_47339127475560'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:40 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (8.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<
+    6: 		<%= link_to user.username user_path(user) %>
+    7: 	</li>
+    8: </ul>
+    9: <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__4457572361052314531_69989856169900'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989856169900'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:40 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<
+    6: 		<%= link_to user.username user_path(user) %>
+    7: 	</li>
+    8: </ul>
+    9: <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__4457572361052314531_69989861798680'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989861798680'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:41 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (7.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    3: 	<% @user.each do |user|%>
+    4: 	<li>
+    5: 		<
+    6: 		<%= link_to user.username user_path(user) %>
+    7: 	</li>
+    8: </ul>
+    9: <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__4457572361052314531_69989866303340'
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__4457572361052314531_69989866303340'
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:49:58 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (4.5ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-08-21 21:50:03 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.5ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-21 21:50:06 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.6ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:50:27 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (17.2ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:50:28 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (4.9ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:50:28 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (3.9ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-21 21:50:28 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/users
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/users (3.7ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+

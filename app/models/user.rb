@@ -1,5 +1,6 @@
 class User < ApplicationRecord
  has_secure_password
+ 
  attr_accessor :remember_token
  #before_save {self.email = email.downcase}
  #validates :username, :email, :password, presence: true
