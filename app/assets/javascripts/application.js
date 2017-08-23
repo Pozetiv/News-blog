@@ -14,4 +14,5 @@
 //= require turbolinks
 //= require_tree .
 //= require trix
-
+//= require jquery
+//= require jquery_ujs

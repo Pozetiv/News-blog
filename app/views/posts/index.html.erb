@@ -1,4 +1,5 @@
 <h1> This's main page site </h1>
+<%=will_paginate %>
 <% @posts.each do |post| %>
 <div id="page-header">
   <h1><%= link_to post.title, post_path(post)%></h1>
@@ -11,3 +12,4 @@
 
 <% end %>
 </div>
+<%= will_paginate%>

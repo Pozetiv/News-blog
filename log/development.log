@@ -16387,3 +16387,1532 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:07:09 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (16.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 647ms (Views: 583.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:08:17 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 148ms (Views: 146.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:08:17 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-23 21:08:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YD0nsG+E5Z8qSqDWnCwhPIRqgze5myljuWC8krK7cRW5/UNf7Lfkfk6uOE8HP69iBUMbf6HUVXI92JPJMiLRyA==", "session"=>{"username"=>"pozetiv", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pozetiv"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 242ms (Views: 70.8ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-23 21:08:32 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V3gfp2x0n1fA0pgZF5Wt1JkB89dFDmZg0DpIe/yZd+SOuHtI70eetqQ2AICMhiOKGChrn11BGnFUgmcgfADXOQ==", "session"=>{"username"=>"pozetiv", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pozetiv"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 128ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-08-23 21:08:32 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.6ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sessions" for 127.0.0.1 at 2017-08-23 21:08:35 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xPnYeaf/tmoLIgL1GitjtduHqC8ghVFJL9iTOVFb+0cdObyWJMy3i2/GmmyBOO3rWq4wZzjKLVirYLxi0cJbmg==", "id"=>"sessions"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sessions):
+  
+app/controllers/users_controller.rb:41:in `destroy'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:28 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 396ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path, method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861353684620'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:52 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861353756740'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861355095480'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (10.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861355520020'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861302194580'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861302281380'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:11:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861302197360'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861468284800'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861355021740'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861353112800'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861350792460'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861348402620'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861345978020'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861337539900'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861468601220'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861353706220'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", sessions_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `[]'
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861354925860'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:12:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", sessions_path[:id], method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `[]'
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861350890840'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:13:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:13:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (21.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:13:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2017-08-23 21:13:16 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/sessions"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:14:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    27:           <li><%=link_to "SING UP", '#', class: 'btn btn-success navbar-btn' %></li>
+    28:           <%if logged_in? %>
+    29:            <li><%=link_to "Setting profile", edit_user_path(current_user) %></li>
+    30:            <li><%= link_to "Logout", session_path, method: :delete, class: 'btn btn-default navbar-btn'  %></li>
+    31:            <% else %>
+    32:            <li><%=link_to "SING IN", singin_path, class: 'btn btn-default navbar-btn' %></li>
+    33:            <% end %>
+  
+app/views/layouts/posts.html.erb:30:in `_app_views_layouts_posts_html_erb___3938711206841846154_69861343407580'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:16:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions/id" for 127.0.0.1 at 2017-08-23 21:16:47 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zHVhdWjmjaYwrYYjccXl3aiRZKvoAWsxOtAf2rYiLLYVtQWa69WMR1RJHrrq1muDKbj84/BOFyC+aDCBNruMaw==", "id"=>"id"}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:16:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:16:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:16:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-23 21:16:57 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWQWIflFx1C3y1Q2n7He+ugSlMAXfu8KoDAbsunFI3a4pHLOenbGsdMvzK8EolCkaTsMiA8xkxskiDTpaVyDqw==", "session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 127ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-08-23 21:16:57 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (1.0ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:17:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions/id" for 127.0.0.1 at 2017-08-23 21:17:03 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9+psMDyn3tqZqLobUIm04OaU4ZTkX2H/0cYfmb+DG5QuKgjfv5TfO/1MIoLLmjq+Z7153PwQHe5VfjDCPxq7SQ==", "id"=>"id"}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:17:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:27:26 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (461.8ms)
+Completed 500 Internal Server Error in 466ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x0055dbe1c3eed0>:0x0055dbe1a6b810>):
+    1: <h1> This's main page site </h1>
+    2: <%=will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_47201436055660'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:28:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (396.6ms)
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x007f13b9481cb8>:0x007f13b9e83c98>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_69861344809820'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:28:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (393.9ms)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x007f13b9481cb8>:0x007f13c001d6e8>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_69861401228120'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:28:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (369.6ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x007f13b9481cb8>:0x007f13b433b340>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_69861302206980'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:29:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (361.9ms)
+Completed 500 Internal Server Error in 365ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x007f13b9481cb8>:0x007f13b433b5c0>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_69861302208140'
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 11], ["OFFSET", 0]]
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:30:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (428.4ms)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x0055dbe190c078>:0x0055dbe1887b70>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_47201435401020'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:30:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (347.5ms)
+Completed 500 Internal Server Error in 350ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x0055dbe190c078>:0x007f13b45e9ce0>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4423973600956959994_69861303604060'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:14 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (21.8ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x00556cfc950c68>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859158596140'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:16 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (18.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4c7b898>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859159561020'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:16 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (11.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4fc0080>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859161257740'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (16.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x00556cfc624058>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_46963289559720'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (10.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x00556cfcc69508>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_46963292836540'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (13.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4742f48>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859156823480'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:18 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (15.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4b24c60>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859158850460'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:18 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (10.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4e272a0>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859160436760'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (15.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b5031e38>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859161507360'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (15.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4c49410>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859159457980'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:31:20 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (13.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x00556cfcb6a0a8>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_46963292313320'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (14.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f12b4670660>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2818392949571542656_69859156342960'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:28 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (21.5ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x005601be2f0178>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_47282742841520'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:30 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (17.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x005601be2807b0>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_47282742618260'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (18.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x005601be4c1358>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_47282743802340'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (11.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x005601bec96df8>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_47282747910040'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (10.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x005601bed59628>):
+    1: <h1> This's main page site </h1>
+    2: <%= will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_47282748309840'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 494ms (Views: 491.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 103.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (13.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f11bc29a0c0>):
+    1: <h1> This's main page site </h1>
+    2: <%=will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_69857074005860'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (9.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f11bc391fa0>):
+    1: <h1> This's main page site </h1>
+    2: <%=will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_69857074513620'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (11.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f11bc459c30>):
+    1: <h1> This's main page site </h1>
+    2: <%=will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_69857074922700'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:35:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/posts (9.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Post::ActiveRecord_Relation:0x007f11bc51fb10>):
+    1: <h1> This's main page site </h1>
+    2: <%=will_paginate %>
+    3: <% @posts.each do |post| %>
+    4: <div id="page-header">
+    5:   <h1><%= link_to post.title, post_path(post)%></h1>
+  
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2563845708705687732_69857075328020'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:45:53 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 34ms
+
+
+  
+NoMethodError (undefined method `oaginate' for Post (call 'Post.connection' to establish a connection):Class
+Did you mean?  paginate):
+  
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:45:54 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+NoMethodError (undefined method `oaginate' for Post (call 'Post.connection' to establish a connection):Class
+Did you mean?  paginate):
+  
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:45:55 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+NoMethodError (undefined method `oaginate' for Post (call 'Post.connection' to establish a connection):Class
+Did you mean?  paginate):
+  
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:45:55 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+
+  
+NoMethodError (undefined method `oaginate' for Post (call 'Post.connection' to establish a connection):Class
+Did you mean?  paginate):
+  
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:45:56 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+
+  
+NoMethodError (undefined method `oaginate' for Post (call 'Post.connection' to establish a connection):Class
+Did you mean?  paginate):
+  
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:45:56 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 19ms
+
+
+  
+NoMethodError (undefined method `oaginate' for Post (call 'Post.connection' to establish a connection):Class
+Did you mean?  paginate):
+  
+app/controllers/posts_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:46:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (15.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 82.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:46:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:46:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:50:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:50:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-23 21:50:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2erIyEB4bpWIBldksCigkzQi4jgoa7+Ozjz2GhmNmZgAKqwnw0tvdOziz/0rOy7NtQt6cDAkw59KhNlBmRQ5RQ==", "session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 139ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-08-23 21:50:33 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.5ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sessions" for 127.0.0.1 at 2017-08-23 21:50:35 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I+PF/5NSpKdM7arpD2I/ax5oIFKiV758dGJ7Pdl+8Wz6I6EQEGGlRigJMnCUcbE1n0G4GroYwm3w2lRmWedRsQ==", "id"=>"sessions"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sessions):
+  
+app/controllers/users_controller.rb:41:in `destroy'
+Started GET "/.y" for 127.0.0.1 at 2017-08-23 21:50:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/.y"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (5.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (9.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (6.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/sessions/id" for 127.0.0.1 at 2017-08-23 21:51:06 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JjOcXoWO8qIyNLJYKCUzBc8gbgIl30coLuoCY99fYsz/8/ixBr3zQ1bQKsGzNr1bTgn2Sj2QOzmqUi04X8bCEQ==", "id"=>"id"}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:51:10 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at 2017-08-23 21:51:10 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-08-23 21:51:15 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGyLhFPQTmuQWguTMJgKHrhHOuZefNqM7SYTJP/nrzfNrO9r0ONPivS+kwqri4RAOW6irkYzpp1pnjx/f34P6g==", "session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "commit"=>"SINGIN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 122ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-08-23 21:51:16 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.5ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 48.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/sessions/id" for 127.0.0.1 at 2017-08-23 21:51:19 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cna6fI6tPdnWorXd4hMyyKOWune3BZOG4JD6LdfHWZSrtt6TDZ48OLJGLUR5ALyWIr8iP69K75dkKNV2V175SQ==", "id"=>"id"}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:51:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 0.8ms)
+
+
