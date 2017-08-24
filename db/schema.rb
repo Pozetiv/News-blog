@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823185437) do
+ActiveRecord::Schema.define(version: 20170824182617) do
 
   create_table "comments", force: :cascade do |t|
     t.string "author"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20170823185437) do
     t.string "remember_digest"
     t.string "string"
     t.boolean "admin", default: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
   end
 
 end
