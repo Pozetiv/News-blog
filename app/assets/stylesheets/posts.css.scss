@@ -30,3 +30,13 @@ body{
 article.post{
   border-bottom: 0.1em solid darkgrey;
 }
+
+field_with_errors.input {
+
+   corder-color: red;
+}
+
+.img-show{
+  display: block;
+  margin-bottom: 2em;
+}

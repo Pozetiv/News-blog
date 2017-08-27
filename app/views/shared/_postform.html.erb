@@ -1,9 +1,8 @@
 <%= form_for @posts, html: {multipart: true} do |f|%>
 <% if @posts.errors.any? %>
-<div id="error_explanation">
+<div class="alert alert-danger">
     <h2>
-        <%= pluralize(@posts.errors.count, "error") %> prohibited
-        this POST from being saved:
+        <%= t('common.errors')%>
     </h2>
     <ul>
         <% @posts.errors.full_messages.each do |msg| %>

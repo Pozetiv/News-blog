@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :search_post, only: [:show, :edit, :update, :destroy ]
+  before_action :search_post, only: [:show, :edit, :update, :delete]
 
   def index
     @posts = Post.paginate(page: params[:page])
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
- @posts = Post.find(params[:id])
+
   end
 
   def delete
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   def create
     @posts = Post.new(post_params)
     if @posts.save
-      redirect_to :show
+      redirect_to :show, info: 'POST is create successful'
     else
       render :new
     end
