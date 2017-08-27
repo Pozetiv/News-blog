@@ -1,15 +1,20 @@
 <h1> This's main page site </h1>
 <%=will_paginate %>
-<% @posts.each do |post| %>
-<div id="page-header">
-  <h1><%= link_to post.title, post_path(post)%></h1>
+  <% @posts.each do |post| %>
+<article class="post">
+  <section class="post-header">
+    <h2><%= link_to post.title, post_path(post)%></h2>
+  </section>
 
-<small>
-  <time><%= post.created_at.to_date.strftime("%d %B %Y")%></time>
-<%= link_to 'Read the entire news', "#" %>
-</small>
-</div>
+  <section class="post-body">
+    <small>Date of publication <time><%= post.created_at.to_date.strftime("%d %B %Y") %></time></small>
+    <%if logged_in? %>
+    <%= link_to 'Delete post', posts_path(:id), method: :delete, data: {confirm: "DELETE POST?" },
+                class: 'btn btn-default' %>
+    <%= link_to 'EDIT post', edit_post_path(post), class: 'btn btn-default' %>
+     <%end %>
+  </section>
+</article>
 
-<% end %>
-</div>
 <%= will_paginate%>
+<%end %>

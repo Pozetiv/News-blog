@@ -1,0 +1,3 @@
+HeLLo <%= @user.username%>
+This is link for activation you account on POSTeR
+<%= edit_account_activation_url (@user.activation_token, email: @user.email)

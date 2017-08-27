@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-
+ @posts = Post.find(params[:id])
   end
 
   def delete
@@ -34,9 +34,11 @@ class PostsController < ApplicationController
     if @posts.update_attributes(post_params)
       redirect_to @posts
     else
-      redirect_to :edite
+      redirect_to :edit
+      flash[:info] = "Opps we have some problems"
     end
   end
+
 def destroy
 
   @posts.destroy

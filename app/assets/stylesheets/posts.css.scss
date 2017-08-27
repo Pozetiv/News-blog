@@ -11,7 +11,7 @@ html{
   overflow-y: scroll;
 }
 body{
-  padding-top: 50px;
+  padding-top: 150px;
   background: whitesmoke;
 }
 
@@ -25,4 +25,8 @@ body{
 	width: 100%;
 	margin-top: 50px;
 	
+}
+
+article.post{
+  border-bottom: 0.1em solid darkgrey;
 }

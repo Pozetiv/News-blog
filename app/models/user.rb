@@ -25,10 +25,15 @@ class User < ApplicationRecord
  	self.email = email.downcase
  end
 
- def create_ativation_digest
+ def create_activation_digest
  	self.activation_token = User.new_token
  	self.activation_digest = User.digest(activation_token)
  end
 
+ def User.digest(string)
+   cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+              BCrypt::Engine.cost
+   BCrypt::Password.create(string, cost: cost)
+ end
 
 end

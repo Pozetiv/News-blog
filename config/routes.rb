@@ -11,5 +11,7 @@ resources :posts
 get '/singin', to: 'sessions#new' 
 #post '/singin', to: 'sessions#create'
 #delete  '/logout' to: 'sessions#destroy'
-resources :account_activisioins, only: [:edit]
+resources :account_activations, only: [:edit]
+get '/creatpost', to: 'posts#new'
+
 end
