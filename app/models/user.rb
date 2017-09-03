@@ -6,7 +6,7 @@ class User < ApplicationRecord
  
  attr_accessor :remember_token
  #before_save {self.email = email.downcase}
- validates :username, :email, :password, presence: true
+ #validates :username, :email, :password, presence: true
  #validates :password, length: {in: 4..16}#, massage: "Password must be with length min 4 unite"
  #validates :username, length: {minimum: 3}
  #VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-\.]+\.[a-z]+\z/i
