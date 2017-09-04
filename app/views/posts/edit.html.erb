@@ -1,4 +1,4 @@
-<h1>This page for edite POSTS</h1>
-<%=render "shared/postform" %>
+<h2>EDIT FORM PANEL</h2>
 
-
+<%= render 'form' %>
+<%= link_to 'Delete post', post_path(@post), method: :delete, data: {confim: 'DO YOU WANT DELETE POST?'} %>

@@ -1,25 +1,5 @@
-<h1>SHow page</h1>
-<h2><%= @posts.title %> </h2>
-<div class="image">
-  <%= image_tag @posts.image.url(:big), class: 'img-show' if @posts.image? %>
-</div>
-<%= @posts.body %>
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script>
+<h1><%= @post.title %></h1>
+<%= image_tag @post.image.url(:big), class: 'img-show' if @post.image? %>
+<%= @post.body %>
 
-
-    var disqus_config = function () {
-    this.page.url = 'http://localhost.net<%= request.original_fullpath %> ' // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier ='<%= @posts.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://newsblog-1.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+<%= link_to 'edit', edit_post_path(@post) %>

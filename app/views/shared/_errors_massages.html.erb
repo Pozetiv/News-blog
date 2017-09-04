@@ -1,9 +1,0 @@
-<%if @users.errors.any? %>
- <div class="alert alert-danger">
-	<%= t('common.errors')%>
-   <ul>
-	<% @user.errors.full_massages.each do |msg|%>
-  <li><%= msg %></li>
-         </ul>
-   <% end %>
-<%end %>

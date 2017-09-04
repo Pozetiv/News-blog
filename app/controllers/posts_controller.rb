@@ -1,59 +1,56 @@
 class PostsController < ApplicationController
-  before_action :search_post, only: [:show, :edit, :update, :delete]
+
+  before_action :search_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.paginate(page: params[:page])
-  end
-
-  def new
-    @posts = Post.new
+    @posts = Post.all
   end
 
   def show
 
   end
 
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to @post, success: 'Your create new post'
+    else
+      render :new, warning: 'Opps we have got some problems'
+    end
+  end
+
   def edit
 
   end
 
-  def delete
-  end
-
-  def create
-    @posts = Post.new(post_params)
-    if @posts.save
-      redirect_to :show, info: 'POST is create successful'
-    else
-      render :new
-    end
-  end
-
   def update
-
-    if @posts.update_attributes(post_params)
-      redirect_to @posts
+    if @post.update_attributes(post_params)
+      redirect_to @post, success: 'ALL OK, your update post '
     else
-      redirect_to :edit
-      flash[:info] = "Opps we have some problems"
+      render :edit, warning: 'Opps we have got some problems'
     end
   end
 
-def destroy
+  def destroy
+    @post.destroy
+    redirect_to post_path
+  end
 
-  @posts.destroy
-  redirect_to posts_path
-end
+
 
 
   private
 
-  def search_post
-    @posts = Post.find(params[:id])
-  end
-
   def post_params
-    params.require(:post).permit(:title, :body, :image)
-
+      params.require(:post).permit(:title, :body, :image)
   end
+
+  def search_post
+    @post = Post.find(params[:id])
+  end
+
 end

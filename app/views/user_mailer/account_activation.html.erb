@@ -1,3 +1,0 @@
-<h1>Hello <%= @user.username%></h1>
-<p>This is email has activation link for you account on POSTeR. Click on this link for activate you profile</p>
-<%=link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
