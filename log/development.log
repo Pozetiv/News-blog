@@ -2721,3 +2721,451 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 78ms (Views: 76.3ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTags (20170907174401)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170907174401"]]
+  [1m[35m (240.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTaggings (20170907174438)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTaggings (20170907174438)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "tag_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_9fcd2e236b"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_taggings_on_post_id" ON "taggings" ("post_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170907174438"]]
+  [1m[35m (376.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_post_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-09-07 20:56:50 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (16.8ms)
+Completed 200 OK in 767ms (Views: 696.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2017-09-07 20:57:30 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/_form.html.erb (158.3ms)
+  Rendered posts/edit.html.erb within layouts/posts (160.1ms)
+Completed 200 OK in 276ms (Views: 252.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-07 21:07:45 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (14.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (132.1ms)
+Completed 200 OK in 975ms (Views: 826.0ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2017-09-07 21:07:50 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/_form.html.erb (74.0ms)
+  Rendered posts/edit.html.erb within layouts/posts (88.8ms)
+Completed 200 OK in 139ms (Views: 134.4ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2017-09-07 21:08:01 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E49adqtkbSi9dQvlXrwNxoTci2QXv1oiQ8YOPCZ0l6bbSOXQhf07x9GWUmyE1XnUnZnDyLDRVx5G4xsEy6GwDw==", "post"=>{"title"=>"1", "body"=>"11", "all_tags"=>"find MAN"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Load (21.7ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "find MAN"], ["LIMIT", 1]]
+  [1m[35mSQL (86.7ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "find MAN"], ["created_at", "2017-09-07 18:08:01.711635"], ["updated_at", "2017-09-07 18:08:01.711635"]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 6], ["tag_id", 1], ["created_at", "2017-09-07 18:08:01.939521"], ["updated_at", "2017-09-07 18:08:01.939521"]]
+  [1m[35m (288.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/posts/6
+Completed 302 Found in 558ms (ActiveRecord: 399.1ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-07 21:08:02 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.6ms)
+Completed 200 OK in 160ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-07 21:08:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (9.3ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tags/find%20MAN" for 127.0.0.1 at 2017-09-07 21:08:32 +0300
+  
+LoadError (Unable to autoload constant TagsController, expected /home/roman/News-blog/app/controllers/tags_controller.rb to define it):
+  
+activesupport (5.1.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.1.3) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.1.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-07 21:16:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (12.0ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2017-09-07 21:16:45 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/_form.html.erb (7.6ms)
+  Rendered posts/edit.html.erb within layouts/posts (9.0ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tags/find%20MAN" for 127.0.0.1 at 2017-09-07 21:16:49 +0300
+  
+LoadError (Unable to autoload constant TagsController, expected /home/roman/News-blog/app/controllers/tags_controller.rb to define it):
+  
+activesupport (5.1.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.1.3) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.1.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-07 21:19:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (47.3ms)
+Completed 200 OK in 124ms (Views: 102.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-09-07 21:19:49 +0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (6.7ms)
+  Rendered posts/new.html.erb within layouts/posts (8.6ms)
+Completed 200 OK in 91ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-07 21:19:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (12.1ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tags/find%20MAN" for 127.0.0.1 at 2017-09-07 21:19:53 +0300
+  
+LoadError (Unable to autoload constant TagsController, expected /home/roman/News-blog/app/controllers/tags_controller.rb to define it):
+  
+activesupport (5.1.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.1.3) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.1.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2017-09-07 21:21:35 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (89.4ms)
+Completed 200 OK in 425ms (Views: 379.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/tags/find%20MAN" for 127.0.0.1 at 2017-09-07 21:21:40 +0300
+  
+LoadError (Unable to autoload constant TagsController, expected /home/roman/News-blog/app/controllers/tags_controller.rb to define it):
+  
+activesupport (5.1.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.1.3) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.1.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2017-09-07 21:23:03 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered posts/index.html.erb within layouts/posts (80.8ms)
+Completed 200 OK in 497ms (Views: 459.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/tags/find%20MAN" for 127.0.0.1 at 2017-09-07 21:23:06 +0300
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"find MAN"}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "find MAN"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Tag:0x007f19a9581c80>
+Did you mean?  post
+               post=):
+  
+app/controllers/tags_controller.rb:5:in `show'
