@@ -1,7 +1,5 @@
 <h1>INDEX ACTIONS</h1>
-<%= will_paginate @posts %>
-<article>
-  <div class="post-head">
+
 <%@posts.each do |post|%>
 <%= link_to post.title, post_path(post)%>
 
@@ -9,18 +7,11 @@
   <time>
   <%= post.created_at.to_date.strftime("%d %B, %Y") %>
   </time>
-  <% if user_signed_in? %>
   <%= link_to 'EDIT', edit_post_path(post) %>
   <%= link_to 'Delete', posts_path(post), method: :delete, data: {confirm: "DELETE??"} %>
-      <% end %>
 </small>
-        </div>
 <section class="clearfix">
   <%= image_tag post.image.url(:thumb), class: 'img-thumbnail' if post.image?%>
 
 </section>
-        <section class="footer-post">
-          <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'tag tag-primary'}.join(' ') %>
-        </section>
 <% end %>
-</article>

@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+
   before_action :search_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.paginate(page: params[:page])
+    @posts = Post.all
   end
 
   def show
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-      params.require(:post).permit(:title, :body, :image, :all_tags)
+      params.require(:post).permit(:title, :body, :image)
   end
 
   def search_post
