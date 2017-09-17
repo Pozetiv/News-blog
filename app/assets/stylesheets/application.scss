@@ -13,9 +13,18 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 .img-show{
   display: block;
   margin-bottom: 1.5em;
+}
+
+.debug_dump{
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  
 }
