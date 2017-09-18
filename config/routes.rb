@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :posts
   resources :users
+  get '/singup', to: 'users#new'
+  post '/singup', to: 'users#create'
 
 end
