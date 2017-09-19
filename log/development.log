@@ -5244,3 +5244,2075 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 104ms (Views: 101.9ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-19 19:49:06 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (16.4ms)
+Completed 200 OK in 1225ms (Views: 1158.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/singup" for 127.0.0.1 at 2017-09-19 19:50:01 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered shared/_error_massages.html.erb (1.1ms)
+  Rendered users/_formuser.html.erb (167.9ms)
+  Rendered users/new.html.erb within layouts/users (178.6ms)
+Completed 200 OK in 352ms (Views: 281.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/singup" for 127.0.0.1 at 2017-09-19 19:53:00 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iSVccBZjoXk5ucpuwWH9ka07cVaqDQfQ4O+6+99Is7FH4mLtTYgCHsn1Y2lZYdw/iSlWAwG1fuOftq0/SQxEbw==", "user"=>{"name"=>"singup", "email"=>"singup@ya.ro", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (10.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "singup@ya.ro"], ["LIMIT", 1]]
+  [1m[35mSQL (49.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "singup"], ["email", "singup@ya.ro"], ["created_at", "2017-09-19 16:53:00.787909"], ["updated_at", "2017-09-19 16:53:00.787909"], ["password_digest", "$2a$10$LdpM9M32VrKIc00vk8mAAOSnEZeg11ZUsDYS4568nogGSiqQRwzxG"]]
+  [1m[35m (518.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/4
+Completed 302 Found in 895ms (ActiveRecord: 578.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-19 19:53:01 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (1.3ms)
+Completed 200 OK in 223ms (Views: 120.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-19 20:07:21 +0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (2.5ms)
+Started GET "/users/2/edit" for 127.0.0.1 at 2017-09-19 20:07:25 +0300
+Completed 200 OK in 5079ms (Views: 4896.3ms | ActiveRecord: 1.2ms)
+
+
+  
+Started GET "/users/2/" for 127.0.0.1 at 2017-09-19 20:07:36 +0300
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 20:07:36 +0300
+AbstractController::ActionNotFound (The action 'edit' could not be found for UsersController):
+Processing by UsersController#show as HTML
+  
+  Parameters: {"id"=>"2"}
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PostsController#index as HTML
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.7ms)
+Completed 200 OK in 703ms (Views: 98.0ms | ActiveRecord: 1.8ms)
+
+
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (15.5ms)
+Completed 200 OK in 263ms (Views: 101.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 20:07:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 20:07:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 20:07:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.1ms)
+Completed 200 OK in 78ms (Views: 75.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 20:07:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:07:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (450.7ms)
+Completed 500 Internal Server Error in 535ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password_fiel' for #<ActionView::Helpers::FormBuilder:0x007f2126657658>
+Did you mean?  password_field):
+    4: <%= f.email_field :email, class: 'form-control' %>
+    5: 
+    6: <%= f.label :password %>
+    7: <%= f.password_fiel :password, class: 'form-control' %>
+    8: 
+    9: <%= f.submit 'LOG IN', class: 'btn btn-primary' %>
+   10: 
+  
+app/views/sessions/new.html.erb:7:in `block in _app_views_sessions_new_html_erb___2359430003198745174_69890177356980'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb___2359430003198745174_69890177356980'
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:08:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 131ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:21 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:23 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:23 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:23 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:44 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:09:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:13:12 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 20:48:26 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (156.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (296.7ms)
+Completed 200 OK in 4312ms (Views: 3933.4ms | ActiveRecord: 157.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 20:50:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:54:19 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (134.8ms)
+Completed 200 OK in 222ms (Views: 204.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 20:54:48 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c2kKsgNBBlP4gCfzs8rdYSqhCQtBRnmyA9EUtgBEIxGG3FNnFaLzPx7YHoKm5/Sys9CeU1/3SnCGOkAGiborog==", "sessions"=>{"email"=>"gg@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 288ms
+
+
+  
+NameError (undefined local variable or method `email' for #<SessionsController:0x007fc251c1b6d0>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-09-19 20:56:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 127ms (Views: 125.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 20:56:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGB6I8tBlyQWSATQT/Jm3tPj+4IcsJnZW5rZsQoOgEd6QOMS3Z5vUhSiTXA/+LFLRDrsugzA2kFdYil1Maz2Qg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 257ms
+
+
+  
+NameError (undefined local variable or method `email' for #<SessionsController:0x007fc2516a4670>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:00:05 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGB6I8tBlyQWSATQT/Jm3tPj+4IcsJnZW5rZsQoOgEd6QOMS3Z5vUhSiTXA/+LFLRDrsugzA2kFdYil1Maz2Qg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 11ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:01:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGB6I8tBlyQWSATQT/Jm3tPj+4IcsJnZW5rZsQoOgEd6QOMS3Z5vUhSiTXA/+LFLRDrsugzA2kFdYil1Maz2Qg==", "sessions"=>{"email"=>"sada@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 10ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:12 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGB6I8tBlyQWSATQT/Jm3tPj+4IcsJnZW5rZsQoOgEd6QOMS3Z5vUhSiTXA/+LFLRDrsugzA2kFdYil1Maz2Qg==", "sessions"=>{"email"=>"sada@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sada@ya.ru"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 153ms (Views: 113.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:15 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E9SvBqk6tolNM9+a6WtlDacJT0EVlfHTx15r2ULq1dTZ9DY3v+VO/0/ZljqZYbKYMNBYeQXlskvBppsdeUij0Q==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 80ms (Views: 78.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:15 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nOoKc5r/wGir7jekNsgOcdwgLZz2SUJSX8G9/I5uSKtWypNCjCA4HqkEfgRGwtnkS/k6pOY5AcpZOU04tcw+rg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:16 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LGAnqJyfd12BT9SIoBoFcn8yOI+AF92waFBjHBuZzG/mQL6ZikCPK4OlnSjQENLn6Osvt5BnnihuqJPYIDu6ag==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:16 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aRm4IbanmqRBu751NZkMqArLVHK4REmS2bSco6z4tHSjOSEQoHhi0kNR99VFk9s9nRJDSqg0CgrfTGxnl1rCcQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:16 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sSvJoyOKkne66foS/b6zrYaWJojesA5xrM6pFuIpVkx7C1CSNVVqAbgDs7KNtGQ4EU8xsM7ATemqNlnS2YsgSQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O0dq3861UMAbEB2lr1jdXt7GNGc0ObRs/hzjTy6mYwnxZ/Pu2Gqothn6VAXfUgrLSR8jXyRJ9/T45BOLFQQVDA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dEFp62Sh0lipsBp5Gmuz2NYUxAH7yeqXQHzYnLDMNQW+YfDacn4qLqtaU9lqYWRNQc3TOeu5qQ9GhChYi25DAA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 77ms (Views: 74.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XFzXQx8qM+W0+9oY5k1JAyseayhhPuPsRCEDi6YpK1WWfE5yCfXLk7YRk7iWR56WvMd8EHFOoHRC2fNPnYtdUA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/IHI/VuG3JdtYut4yw62YvoUwdZHYzjSVNfM7V5/2nA2oVHMTVkk4W+Ioti7BGH3bc3W7lcTe0pSLzwpZd2sdQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fMZm/eMIPO2ujoxbbnuRlAxekoHowS4PG8ImbQjjaE+25v/M9dfEm6xkxfsecUYBm4eFufixbZcdOtapM0EeSg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A0JtXvV1Nn20qlaukN+Zhk/1IpsktcH5TWBpQZyvBhPJYvRv46rOC7ZAHw7g1U4T2Cw1ozTFgmFLmJmFpw1wFg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hR8h1igGsYid5RzuHQpjyd5T4tanocV8IFbIVKkq3dxPP7jnPtlJ/p8PVU5tALRcSYr17rfRhuQmrjiQkoir2Q==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:19 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSu8GeQYPSW7aIH9wHkZrjo9OWKBffWdyyyYXnHX1rJfCyUo8sfFU7mCyF2wc847reQuWpENtgXN1GiaSnWgtw==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:19 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v6F+swtvZVM3Wd2nqFPp2v7VHqE7FwQzVEyg52k+LWV1geeCHbCdJTWzlAfYWT5PaQwJmStnR6tStFAjUpxbYA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:19 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7g3LVTB/Dc0nYTQbNk6ScfAGYros7qkpN0ykfoq1ouNmK4cQh4EQTZ3zXAc0+3cUBkOsvjD+TyiJcJVwYigjg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j9/Y6xSUx1p3P3nX+FuCNCv+X+cFpWZluZtX4XoaVBJF/0HaAks/LHXVMHeIUVWhvCdI3xXVJf2/Y6clQbgiFw==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"adw4XTxELX2XjeMYOj2SoEg/XH6WvV4RyKOG5ILVQA6j/KFsKpvVC5VnqrhKN0U13+ZLRobNHYnOW3YguXc2Cw==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q26jYfj34xl5wswdXZBncmycIxkTxg7QnXxJF3yHOeGJTjpQ7igbb3sohb0tmrDn+0U0IQO2TUibhLnTRyVP5A==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 109ms (Views: 106.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:21 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+08GK1v7uSNWiAUvid79qQdtlVyZ6oYNbPI8iyjJl/hzaUpu7AWko+wabTOLaxjM8ShbWIX6YAzSzg2FwFQWg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 146ms (Views: 143.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:22 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iVlUCV64OeCAQlBJn7n6+Ma53R4DE7dBGbKPLKGZL09Dec04SGfBloKoGenvsy1tUWDKJhNj9NkfSn/omjtZSg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:22 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uy9u9tEPkQZHXVTFYoDEfnDMpiQJfBBpTXRSiMXpjqhxD/fHx9BpcEW3HWUSihPr5xWxHBkMU/FLjKJM/kv4rQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 73ms (Views: 71.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:22 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGAKaaY3PNg3+PzbVJEO31S64dNHq1J54zEiB1vy0aX+QJNYsOjErjUStXskm9lKw2P261fbEeHlydLDYFCnoA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aCc1iHoewRf0Xr4atCpN7DnCoqT/u4j8UouUUJiDUY+iB6y5bME5Yfa097rEIJp5rhu1nO/Ly2RUc2SUoyEnig==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6QL98H8LyoubF8kR4SKMUXXKAW/8+fjNJ9FNPiCL+QJhJLG1yPXXCyGFoQ3jl2k0g4/Pa+DpHsyZ7XwwyBZ4Q==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 88ms (Views: 86.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vPtRRD9GYZOWuIbeL93yGijJrW7dOsS5R+QqNo9OoCZ228h1KZmZ5ZRSz35f1yWPvxC6Vs1KhyFBHNrytOzWIw==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJok8BI13QiDxL1SjdWTohw4mNmzshZf9X0ZBCNA2Tqqur3BBOolfoEu9PL930Q3i+GP4aPCVcfzhenAGOKvPw==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DcOt7lWEBKXkxCso9pDW8rigIYqgn9AQwcJIMBr6yqrH4zTfQ1v80+YuYoiGmgFnL3k2srDvk4jHOrj0IVi8rw==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+fiT+ZkjlVHt6iFn+RA5p2eNOrZ1LWaDOiDUhqrsgFsz2ArIj/xtJ+8AaMeJGu4y8FQtjmVdJRs82CRCkU72Xg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NTpl3VYKpoZR7OKuYRdIhpXiDCfJBNWOPhkdmGgX5jz/GvzsQNVe8FMGqw4RHZ8TAjsbH9l0lhY44e1cU7WQOQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c3zKWOPCVgN2y9hoqOWdY9mA/eFFL6iasi1m7QXKWLC5XFNp9R2udXQhkcjY70r2Tlnq2VVf6wK01ZYpPmgutQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9tH3qZXhRWxCCL+B1Bb7nGwiCor8qjBi1RTKBvaKbds88W6Ygz69GkDi9iGkHCwJ+/sdsuzac/rT7DrCzSgb3g==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XW7hDDvVKRMLsVZO8pt8MpXE0vtpKVu2wbLdoMLMZBWXTng9LQrRZQlbH+6CkaunAh3Fw3lZGC7HSi1k+W4SEA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SPTkCJXZ2YoMx9130Vr/1Ws8UDA2kvDC13McItPASU/A0qhNIifECrZVtWvT7xqwnXmeNCqCFsNpTy0sO13IA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CMs0paKi4wxD2IJtm3MIwPPqbaac9HhPVMhpzN4drAjC662UtH0bekEyy83red9VZDN6noyEO9dSMJkI5b/aDQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4haQTcVhgW/XTymYbI/2RgjOEuBS3YW3FFVkARd8lRAoNgl80755GdWlYDgchSHTnxcF2EKtxi8SrZTFLN7jFQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:27 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8mwJTZvUCP3QeDzRTu70nksBBLPq+I9YtWgRB4Le98c4TJB8jQvwi9KSdXE+5CML3NgTi/qIzMCzkOHDuXyBwg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:27 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mT28jd7qy8v4n1ucSrKkbu8FQ+I/CjHH4V223+C58yFTHSW8yDUzvfp1Ejw6uHP7eNxU2i96cl/npUYb2xuFJA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:27 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3wwLIDs/iMUZf4n3oBNsUsI+rsfN4syanU9sQIOPTQwVLJIRLeBwsxuVwFfQGbvHVee5/92SjwKbt5yEuC07CQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:27 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pfYFFcl2n7LKnKfb2t2cX50Q+G/rTDl6UsKqwV2xpthv1pwk36lnxMh27nuq10vKCsnvV/s8euJUOloFZhPQ3Q==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 81ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:35 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LcgizwNUL+Z/aUdYXPlphu4Q4DBRaSVBfZI25tXZxiHn6Lv+FYvXkH2DDvgs874Tecn3CEEZZtl7asYi7nuwJA==", "sessions"=>{"email"=>"21sas@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "21sas@ya.ru"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:37 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AXgoo5ffks+aSHyPkCQfI54esh8iDaOZQ7pQwtXSSEXLWLGSgQBquZiiNS/gLsi2CcelJzJ94AFFQqAG7nA+QA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:37 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AzzEc/67DChAu8HZxol6m+GMWr1let+nL5tmIqpZaVXJHF1C6GT0XkJRiHm2g60OdlVNhXUKnD8pY5bmkfsfUA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:38 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0HAHefL9k1NEDF11g9DZTurk232dKfAOgr4HOmXPc00aUJ5I5CJrJUbmFNXz2g7bfT3MRY1Zs5aERvf+Xm0FSA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:38 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IS+pwFSAPApMpmckp6KYrkFhEK6dkUZkp6DETCTqRqHrDzDxQl/EfE5MLoTXqE871rgHlo3hBfyhWDSIH0gwpA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:38 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Z/3GINg+rPuB+8RcQf4Ibb3Vm70iXBQZBfrv5n0/z8rv24plb8CxeztprEBDS+0IS5BVuT5M8hi7xt7olaJOg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:39 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cr5KKwO7z8n5EdaL10NdXkJB42W0mMCMkV8m1twvi/i4ntMaFWQ3v/v7nyunSYrL1Zj0XaTogxSXp9YS5439/Q==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:39 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RSvv1eSB6MQxrAR/WdDKUx73wPAOWYIJL8KRqFm17euPC3bk8l4QsjNGTd8p2h3GiS7XyB4pwZEpOmFsYheb7g==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:39 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGrCdK9NjIRADoj2CAOjAvBnzrgeXRyx5h02omJLMh16SltFuZJ08kLkwVZ4CXSXZ77ZgA4tXyng5cZmWelEGA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:40 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W0+183YejbKNW/DUuUC6ilqWSYlbuKe7utwOH2V4fVSRbyzCYMF1xI+xuXTJSm0fzU9esUvI5CO8JP7bXtoLUQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:40 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lN1K4AKWkNAx2Dspt93OXaECd5r2IY48kWiYlq2eejNe/dPRFElopjMyconH1xnINttgouZRzaSXkGhSljwMNg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:41 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JF/sk8TGYjnenkPy3xRyq5M2lyiGRpoKYwZdoC3U3ebuf3Wi0hmaT9x0ClKvHqU+BO+AEJY22ZJl/q1kFnar4w==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:41 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0ZmD4GQCae8Gc0Bta3UJKFhm87rIi61iPV87QLy+MNhZv8+l0/x0b7zhKHFpwOxNriM9vtSbS2ODYwpOVCOxg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:42 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4zMl8RzouP48Q/fM4z8ID8QzdKSVXWN9LFvpSDQv4hwpE7zACjdAiD6pvmyTNd+aU+pjnIUtIOUqoxmMD42UGQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:42 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVj//7v8af4DudnERyG0Ip0DrCjNjcafbUJql2j2zwmbeGbOrSORiAFTkGQ3K2O3Ctq7EN39hQdruppTU1S5DA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YbGejhaCSIMIKt5slQRYBqQEoQBMSIMOZxpcARbEuUmrkQe/AF2w9QrAl8zlDo+TM922OFw4wJZh4qzFLWbPTA==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/4xxWGjCLEOE7ulLdRFn+UIQRPZ72y8N9DL+oqQMCQA1rOhpfh3UNYYEoOsFG7Bs1clTzmurbJXyyg5mn65/BQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cbNIBtuBX9hGnDSSt40D0q9kD6YEapXWBsa6KxfkO1e7k9E3zV6nrkR2fTLHh9RHOL0YnhQa1k4APkrvLEZNUg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 71ms (Views: 65.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:44 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7OZsdfgaL790Yd+vHWTeJkQl3fbGdZB8Z9GBuc+UI+omxvVE7sXXyXaLlg9tbgmz0/zKztYF0+RhKXF99DZV7w==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 86ms (Views: 84.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:02:44 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ECQb7jxSd2tep8mCEOscOuX7UE7ipjp5cNVkTO9Z1gmYAleri6xq6+Q1oZ4SXvlfE76eSv623HjO6VVCB8RXQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:12:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dvUyD5Vz/UQxSwWdu0I6gYxCTALeWHxOOLtY++17Lfu81as+g6wFMjOhTD3LSO0UG5tbOs4oP9Y+Q6g/1tlb/g==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 9ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:15:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dvUyD5Vz/UQxSwWdu0I6gYxCTALeWHxOOLtY++17Lfu81as+g6wFMjOhTD3LSO0UG5tbOs4oP9Y+Q6g/1tlb/g==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 10ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-09-19 21:15:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 159ms (Views: 158.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 21:15:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 101ms (Views: 99.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:15:51 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3dTpoweXUEcBwiHEa5F1M46p8wVA+gm9x6QZQcXN0lgX9HCSEUioMQMoaGQbm6KmGXDkPVCKSiXBXOmF/m+kXQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:17:48 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3dTpoweXUEcBwiHEa5F1M46p8wVA+gm9x6QZQcXN0lgX9HCSEUioMQMoaGQbm6KmGXDkPVCKSiXBXOmF/m+kXQ==", "sessions"=>{"email"=>"ada@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/" for 127.0.0.1 at 2017-09-19 21:22:22 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (17.1ms)
+Completed 200 OK in 836ms (Views: 768.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 21:22:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 208ms (Views: 206.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:22:28 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bCJMLJ2xsm1bRRh1QabZ7grvk4j61KoXvDSLXHnUuhckL4+AuaRlqgBDPWFFytJZVvCGrAmirCqwu97Mq4JrfQ==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:23:22 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9ZqHRdw+gUxpuRAbyDW8DHoTk0rTafgV1pl9tlNrGsmYD6Dk224P7HccbQmO9hHwWQGbsTKoSL3L3wS3NY5bg==", "sessions"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/" for 127.0.0.1 at 2017-09-19 21:46:16 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (17.1ms)
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007febd277f7e8>:0x007febd277d7e0>):
+    23:     <div class="navbar-collapse collapse">
+    24:       <ul class="nav navbar-nav navbar-right">
+    25:         <li><%= link_to 'CREATE NEW POST', new_post_path, class: 'nav-link' %></li>
+    26:         <% if logged_in? %>
+    27:             <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+    28:             <li><%= link_to 'Profile', user_path(current_user) %></li>
+    29:             <% else %>
+  
+app/helpers/sessions_helper.rb:8:in `current_user'
+app/helpers/sessions_helper.rb:12:in `logged_in?'
+app/views/layouts/posts.html.erb:26:in `_app_views_layouts_posts_html_erb___4017599763431598496_70325459522380'
+Started GET "/" for 127.0.0.1 at 2017-09-19 21:46:18 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.0ms)
+Completed 500 Internal Server Error in 449ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007febd277f7e8>:0x005583928b59f0>):
+    23:     <div class="navbar-collapse collapse">
+    24:       <ul class="nav navbar-nav navbar-right">
+    25:         <li><%= link_to 'CREATE NEW POST', new_post_path, class: 'nav-link' %></li>
+    26:         <% if logged_in? %>
+    27:             <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+    28:             <li><%= link_to 'Profile', user_path(current_user) %></li>
+    29:             <% else %>
+  
+app/helpers/sessions_helper.rb:8:in `current_user'
+app/helpers/sessions_helper.rb:12:in `logged_in?'
+app/views/layouts/posts.html.erb:26:in `_app_views_layouts_posts_html_erb___4017599763431598496_47011799419760'
+Started GET "/" for 127.0.0.1 at 2017-09-19 21:47:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (18.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 97.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 21:47:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:47:28 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AfFMn+uVqSYE4E7T7SrukWf+zgSSliFKZ/0aZAqqj5lJ/I8zz4B+4V/ma8fpRuUmO+HbIGHgJ3drck/02Pxe8w==", "sessions"=>{"email"=>"sada@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/" for 127.0.0.1 at 2017-09-19 21:48:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 80.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 91.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 71.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 83.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 82.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 86.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (10.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (10.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 85.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 21:48:48 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (9.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 21:53:18 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 21:53:35 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45AfUTF3Ajnovpjj+4aEkIi3gbV8k9PiyOYxyTvCcF6rndz9FWLV/rO4vff/6o8n1KiUkY/l1d/EaWRZ6ZShNA==", "sessions"=>{"email"=>"test1@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:00:08 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T7MNtg1ELC8fOE99Ch1lYhA5eNiEM15I/hM1ZFxE0ifaBVkoiVluFZ9C2olDBmvV4LUw+2u0WIpeZiyAWd9HIg==", "sessions"=>{"email"=>"test1@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:04:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:04:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:04:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:04:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 80ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 22:04:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:04:42 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 98ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 76ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:28 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:28 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:28 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 85ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:30 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:30 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:30 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:05:31 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:05 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDEYvJ/tOfbl4p/mLrDC2vTTnR9mH0E9XXnW8EimPl0ph0wiG/B7zGWYChJnq8xtBF/VPImYR//9DM8UTT2rWA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 98ms (Views: 75.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:07 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TB69B1dCtUaV9tZV6+a/knELnvUEwMmRsPPx+Y2a6dfZqOmZ01/3fBWMQ6Gi/bElgYfW1utHz1MQhugdiAF80g==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:08 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gp9iMYddMRgMRYgascHxlICoSsigSIE4ejG0dzCF5vCPKTavA0BzIow/He742v8jcCQC60/Ph/raRK2TNR5z9Q==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:08 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Td7bDdy4B/H1egu1DS4SNoT8WZQHS2In/J5h3ZetHBzYaI+TWKVFy3UAnkFENRyBdHARt+jMZOVc63g5kjaJGQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:08 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RUiUHUk7AX87SwJm8geziMD4UyAMQ3pH9+xj4OB9e9bQ/sCDzSZDRbsxl5K7HL0/MHQbA+PEfIVXmXoE5ebu0w==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:09 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qh04xr5QixoFIof9UqUDd2bGAEJdAKqOWWSQ2egrkvXXq2xYOk3JIIVYEgkbvg3AlkpIYbKHrEz5EYk97bAH8A==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:09 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zc73GA7CkLSmsLXzdC0GRNCA7HMaModaCmbPllDVxrhYeKOGit/SjibKIAc9NgjzIAykUPW1gZiqE9ZyVU5TvQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 96ms (Views: 92.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:08:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AhiGgCAwp9a6BVUBK4nNeH3dlNpPyDXXiCWGlMtYwHCXrtIepC3l7Dp/wPViksPPjVHc+aBPMxUoUJ9wzsNVdQ==", "session"=>{"email"=>"test1@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@ya.ru"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 197ms (Views: 61.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/singup" for 127.0.0.1 at 2017-09-19 22:08:28 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered shared/_error_massages.html.erb (0.6ms)
+  Rendered users/_formuser.html.erb (54.2ms)
+  Rendered users/new.html.erb within layouts/users (64.9ms)
+Completed 200 OK in 145ms (Views: 139.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/singup" for 127.0.0.1 at 2017-09-19 22:09:00 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UpWmqnfGTquHHRd9l2R+ftoQB9D9nCqn9aZmxU+wWx3Y8X/VzOP7sGeTUsMGlwQ4Fx6dxrKk+gFMtNUqs0WoCw==", "user"=>{"name"=>"admin", "email"=>"admin@adm.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "admin"], ["email", "admin@adm.com"], ["created_at", "2017-09-19 19:09:00.691460"], ["updated_at", "2017-09-19 19:09:00.691460"], ["password_digest", "$2a$10$VQcdfZme1zt8jxUg1gUcYOE1CWr/dHAubLpS/arhVdnMf5BsiB58W"]]
+  [1m[35m (265.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/5
+Completed 302 Found in 433ms (ActiveRecord: 266.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-09-19 22:09:00 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (1.5ms)
+Completed 200 OK in 182ms (Views: 90.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/singup" for 127.0.0.1 at 2017-09-19 22:09:06 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered shared/_error_massages.html.erb (0.5ms)
+  Rendered users/_formuser.html.erb (6.1ms)
+  Rendered users/new.html.erb within layouts/users (7.8ms)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:09:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:09:11 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 90ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:09:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i/sNwpAsIIhUGAKoDbJgxAWGJ3A458XG5Jfsw2JP2uLD9s5utDn3Tw8eJ7wJ3mtzWZkyVMuRw/voGLlTsBkLiA==", "session"=>{"email"=>"admin@adm.com", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/5
+Completed 302 Found in 131ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-09-19 22:09:26 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.9ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:10:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:10:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:10:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-09-19 22:10:33 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.8ms)
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:10:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:10:49 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:24:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 79.8ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-09-19 22:24:38 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YxJ0J5JhqG8GtML8fXogFAopGkAjX9IgYwSxijpEy7b2pCC5FnzqVYbOVwg0YS6j+qVSY8zY1OLDcahuP99esw=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-09-19 22:27:36 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YxJ0J5JhqG8GtML8fXogFAopGkAjX9IgYwSxijpEy7b2pCC5FnzqVYbOVwg0YS6j+qVSY8zY1OLDcahuP99esw=="}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 22:27:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 101.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 80.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-19 22:27:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-19 22:27:43 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-19 22:27:51 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0DU9cFnPH6qLZ469jsKFaFTP0KQjehlIC47QAd2MgguYOP7cfdrIbdBhq6mKro7fCNDFgNAMH3UHAYWRD9pTYQ==", "session"=>{"email"=>"admin@adm.com", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/5
+Completed 302 Found in 133ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-09-19 22:27:51 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.7ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
