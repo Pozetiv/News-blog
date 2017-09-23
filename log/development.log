@@ -7519,3 +7519,1005 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.0ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.4ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.2ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.1ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.6ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.1ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 12:20:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUsers (20170923093756)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170923093756"]]
+  [1m[35m (213.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-23 19:17:01 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (22.8ms)
+Completed 200 OK in 1289ms (Views: 1213.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2017-09-23 19:17:07 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (85.6ms)
+  Rendered posts/edit.html.erb within layouts/posts (186.2ms)
+Completed 200 OK in 300ms (Views: 256.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:17:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2017-09-23 19:17:14 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/edit.html.erb within layouts/posts (6.8ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:17:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2017-09-23 19:17:23 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (2.5ms)
+  Rendered posts/edit.html.erb within layouts/posts (4.1ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2017-09-23 19:17:29 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mYSJ9N5ZQzfBK1qe4lGzR/PMK7LcGfRmBOVxXk6Y1q1q1oVcBLdpivplkw5TY7V0cg3VMZXRsuoCfYdUpkbEUA==", "post"=>{"title"=>"1 t", "body"=>"11t"}, "commit"=>"Update Post", "id"=>"6"}
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `logged_in' for #<PostsController:0x007f004ccd9148>
+Did you mean?  logged_in?
+               log_in):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:179:in `block in halting_and_conditional'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:18:52 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (21.3ms)
+Completed 200 OK in 148ms (Views: 127.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:18:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2017-09-23 19:18:54 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (7.3ms)
+  Rendered posts/edit.html.erb within layouts/posts (12.3ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2017-09-23 19:18:57 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M4nSsW+R9Fo4OKZir0qgbG5VthhqxbeAa6RdrzZMJULA294ZtX/e5wN2b/IeeKZf75RImyMN8QxtPKul3pI3vw==", "post"=>{"title"=>"1", "body"=>"11"}, "commit"=>"Update Post", "id"=>"6"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/helpers/sessions_helper.rb:3:in `log_in'
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:20:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (19.3ms)
+Completed 200 OK in 138ms (Views: 111.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:20:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.7ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:20:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.6ms)
+Completed 200 OK in 110ms (Views: 108.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:20:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.1ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:20:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2017-09-23 19:20:13 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (2.9ms)
+  Rendered posts/edit.html.erb within layouts/posts (4.3ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2017-09-23 19:20:15 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yOuBfUJTBsML415nZusuO8Tv3Amh1ZOtmV0L441fxEaGbjOBqOb0omQMTElNOybFk1K1aMkZCUoHb6zX1goyNg==", "post"=>{"title"=>"sad", "body"=>"dsadddad"}, "commit"=>"Update Post", "id"=>"7"}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `logged_in_user' for #<PostsController:0x007f004d777d98>
+Did you mean?  logged_in?):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:179:in `block in halting_and_conditional'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:21:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (26.7ms)
+Completed 200 OK in 182ms (Views: 156.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:21:49 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2017-09-23 19:21:50 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/edit.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 74ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2017-09-23 19:21:56 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJp6WwAyg074+BPuEi7cG8ldg6Qzs4aAwmgj4mASgUqTyHbz2typ88O22n6jHNooSJx9J3p7wAzE8NXoiMyTtw==", "post"=>{"title"=>"1t", "body"=>"11t"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "1t"], ["body", "11t"], ["updated_at", "2017-09-23 16:21:56.611704"], ["id", 6]]
+  [1m[35m (250.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/posts/6
+Completed 302 Found in 265ms (ActiveRecord: 253.1ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-23 19:21:56 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.3ms)
+Completed 200 OK in 72ms (Views: 59.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-23 19:22:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.5ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-23 19:29:01 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 4159ms (Views: 4158.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-23 19:29:05 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 70ms (Views: 68.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddResetToUsers (20170923163146)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_digest" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_sent_at" datatime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170923163146"]]
+  [1m[35m (234.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 19:56:13 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:56:29 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_reset_path) do 
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:23 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:24 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:24 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:25 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:25 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:26 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:57:26 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:00 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:00 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:01 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:02 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:02 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:03 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:03 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:05 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 19:59:05 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:19 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:20 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:21 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:21 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:21 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:22 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:22 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:23 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:00:23 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+d=  form_for (:password_reset, url: password_resets_path) do
+                              ^
+/home/roman/News-blog/app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/password_resets/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 20:01:14 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 2070ms (Views: 2069.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 20:08:34 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEdlP3l4CmydVjF13R1HHPRftQGod2BdGVJCMafv4oBk5xnc4FWHO4XE62XYbM444Hq9VezXsR3ksj6R9xnm9g==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+Completed 500 Internal Server Error in 213ms
+
+
+  
+NameError (undefined local variable or method `password_reset' for #<PasswordResetsController:0x007f0051414bc0>
+Did you mean?  password_reset_url):
+  
+app/controllers/password_resets_controller.rb:6:in `create'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 20:09:49 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEdlP3l4CmydVjF13R1HHPRftQGod2BdGVJCMafv4oBk5xnc4FWHO4XE62XYbM444Hq9VezXsR3ksj6R9xnm9g==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admins@admin.admin"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 87ms (Views: 70.8ms | ActiveRecord: 1.1ms)
+
+

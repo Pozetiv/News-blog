@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :reset_token
   #user_name
 before_save {self.email = email.downcase}
   validates :name, presence: true, length:  {in: 3..15}
@@ -37,4 +37,16 @@ before_save {self.email = email.downcase}
     def forget
       update_attribute(:remember_digest, nil)
     end
+
+    def create_reset_digest
+      self.reset_token = User.new_token
+      update_attribute(:reset_digest, User.digest(reset_token))
+      update_attribute(:reset_send_at, Time.zone.now)
+    end
+
+    def send_password_reset_email
+      UserMailer.password_reset(self).delivery_now
+    end
+
+
 end
