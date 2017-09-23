@@ -1,7 +1,12 @@
 <% provide(:titile, "FORGOT PASSWORD") %>
-
+<div class="col-md-12">
+  <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name %>">
+        <%= msg %>
+  <% end %>
+  </div>
+</div>
 <div class="col-md-6 col-md-offset-3">
-
 <%= form_for(:password_reset, url: password_resets_path) do |f| %>
 <div class="form-group">
 <%= f.label :email %>

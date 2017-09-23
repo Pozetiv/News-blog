@@ -8521,3 +8521,1135 @@ Processing by PasswordResetsController#create as HTML
 Completed 200 OK in 87ms (Views: 70.8ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-23 22:32:07 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (49.6ms)
+Completed 200 OK in 1801ms (Views: 1702.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:32:23 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered shared/_error_massages.html.erb (19.3ms)
+  Rendered password_resets/new.html.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: <div class="alert alert-danger">
+    3:   The form contains <%= pluralize(@user.errors.count, "error") %>.
+    4: 
+  
+app/views/shared/_error_massages.html.erb:1:in `_app_views_shared__error_massages_html_erb___1535561100723672284_70183300126620'
+app/views/password_resets/new.html.erb:4:in `_app_views_password_resets_new_html_erb__3826629594767689369_70183300318540'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:32 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 180ms (Views: 179.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:34 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:34 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:56 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 127ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:57 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:57 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 87ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:57 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:35:58 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 91ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:36:23 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:36:24 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 91ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:36:41 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 152ms (Views: 150.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:36:42 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 137ms (Views: 135.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 22:36:43 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 104ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:36:50 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asdsd@asdam.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 181ms (Views: 88.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:38:51 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gPkNM7BXULnN5kNhoAn6O2Ie2czHC/Ig86VGiSIHXEIHZG7yUba8JIQ0SAgBoo/HqL+UBim/goIXng00LurxhA==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sadadad@ya.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:25: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:25: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/controllers/password_resets_controller.rb:14:in `create'
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 22:39:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:39:16 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asdsd@asdam.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:01 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xWycM8jpX+8EdV3LApAOeioEW4xRhJj8Fd3JpL7rIbRC8f/yKQizck2nVqKjO3uG4KUWRr8w6F7x5oIZsgaMcg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "adadad@ma.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:02 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AkxIlAk91bCXPm77EhjFWLVdE53INljLwQhjHA9fmxeF0StV6Nw5Ld7sZZKzs7Ckf/xeVyaCKGklMyihA7I20Q==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 91ms (Views: 89.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:03 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HArn3h+e4AkmiNqUtN7CV/ULySUxwVC0e1lXRgYq6rObl4Qf/n8MlG9a0f0VdberP6qE7991IBafYhz7CsdHdQ==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 80ms (Views: 78.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:40:46 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asdsd@asdam.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/password_resets/new.html.erb:26: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/password_resets/new.html.erb:26: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/controllers/password_resets_controller.rb:14:in `create'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:41:28 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asdsd@asdam.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:41:32 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYQ3vcAhx76fTXcv0ryx2AuW6Lc87FxivV4GI2Sw+D/uGVR8IcArI9affEZzF8QkwTelfdJYLMBZZU2eaF1V+Q==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:42:06 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfkIDL76tIWAItetibv1EvzqX00cimoxTHHSmzi/N56OZGvNXxtYGMnw3MQoEIDuNksSh/I+GpOoSpkmNFKaWA==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admins@admin.admin"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:42:07 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tGNXYS4T/Ag7bn8ZlclU+FB7lxbrsDOvx3zYQD9svdYz/jSgz/IQlXK8dHA0YiEEmtra3AUEQw0jR5P9M4EQEA==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 22:42:39 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dEARLQCO5buktu5e+oUaXFxzXt00+hj8VH8mrXAE/m/z3XLs4W8JJu1k5TdbLm+gltITF9pOaF6wRG0QfOlTqQ==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "adadad@ma.ru"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:06:55 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uF569TO/+xh8bk0ffGu6Kpf7EKWTpHSQmyIJ6WB/RI0/wxk00l4XhTW8RnbdwM/WXVpdb30QBDJ/GUJUbJLpSw==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (12.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$ZiLHdJQXYN6PJwagN7X3KOMXVLqToj/u81vzTUMsWRbiGoYb1QsBS"], ["updated_at", "2017-09-23 20:06:56.113222"], ["id", 5]]
+  [1m[35m (284.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 518ms (ActiveRecord: 300.8ms)
+
+
+  
+NoMethodError (undefined method `reset_send_at=' for #<User:0x0055998b22c6b0>
+Did you mean?  reset_sent_at=
+               reset_sent_at
+               reset_sent_at?):
+  
+app/models/user.rb:44:in `create_reset_digest'
+app/controllers/password_resets_controller.rb:8:in `create'
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 23:08:32 +0300
+  
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 23:08:42 +0300
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 23:08:42 +0300
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 23:08:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+Started GET "/password_resets" for 127.0.0.1 at 2017-09-23 23:08:42 +0300
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:08:57 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$b/s9y8ihyPJgfaLbvNR/U.54vpe8LApLsxy3WIXbpRHCAiLXu/AH2"], ["updated_at", "2017-09-23 20:08:57.304460"], ["id", 5]]
+  [1m[35m (322.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 20:08:57.631383"], ["reset_sent_at", "2000-01-01 20:08:57.629913"], ["id", 5]]
+  [1m[35m (320.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.9ms)
+UserMailer#password_reset: processed outbound mail in 16.3ms
+Completed 500 Internal Server Error in 1125ms (ActiveRecord: 648.0ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    1: <h2>Password reset</h2>
+    2: If you want reset your password click to this link
+    3: <%= link_to "Reset password", edit_password_reset_url(@user.reset_token, email: @user.email) %>
+    4: <p>This link will expire in two hours.</p>
+    5:  <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+  
+app/views/user_mailer/password_reset.html.erb:3:in `_app_views_user_mailer_password_reset_html_erb___2756930270033223596_47058986346560'
+app/mailers/user_mailer.rb:10:in `password_reset'
+app/models/user.rb:48:in `send_password_reset_email'
+app/controllers/password_resets_controller.rb:9:in `create'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:17:22 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$boD6I7Vh6MWWHbIvDEV40.8qmJ2CkpTdD.yTWfQ1mLh3bPNNn/lU6"], ["updated_at", "2017-09-23 20:17:22.378859"], ["id", 5]]
+  [1m[35m (305.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 20:17:22.689806"], ["reset_sent_at", "2000-01-01 20:17:22.689003"], ["id", 5]]
+  [1m[35m (346.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (2.6ms)
+UserMailer#password_reset: processed outbound mail in 8.2ms
+Completed 500 Internal Server Error in 792ms (ActiveRecord: 654.0ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    1: <h2>Password reset</h2>
+    2: If you want reset your password click to this link
+    3: <%= link_to "Reset password", edit_password_reset_url(@user.reset_token, email: @user.email) %>
+    4: <p>This link will expire in two hours.</p>
+    5:  <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+  
+app/views/user_mailer/password_reset.html.erb:3:in `_app_views_user_mailer_password_reset_html_erb___2756930270033223596_47058975172100'
+app/mailers/user_mailer.rb:10:in `password_reset'
+app/models/user.rb:48:in `send_password_reset_email'
+app/controllers/password_resets_controller.rb:9:in `create'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:19:13 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$u8QLdC9rrz0HTzEIpm3QWuUrBFBrELx3yw/qOQ8u1UGA.s1gaPgw2"], ["updated_at", "2017-09-23 20:19:14.039891"], ["id", 5]]
+  [1m[35m (365.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 20:19:14.409626"], ["reset_sent_at", "2000-01-01 20:19:14.408222"], ["id", 5]]
+  [1m[35m (252.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.4ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.9ms)
+UserMailer#password_reset: processed outbound mail in 313.5ms
+Completed 500 Internal Server Error in 1264ms (ActiveRecord: 619.6ms)
+
+
+  
+NoMethodError (undefined method `delivery_now' for #<ActionMailer::MessageDelivery:0x0055fb268fb278>
+Did you mean?  deliver_now
+               deliver_now!):
+  
+app/models/user.rb:48:in `send_password_reset_email'
+app/controllers/password_resets_controller.rb:9:in `create'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:19:54 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1zjQBid9wfG7JFy45ZYcniqC8Mb32y1G9MhAo8nF1ykwYCB+Xwbmo8+mhtCPS2OsgtGCfVrHBf/6Gq/g8q6mg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$n4UIbFgewlKet43eNYVxIeLi9cvAMaUnByYiGfNEwLF7WIaWIKwPm"], ["updated_at", "2017-09-23 20:20:04.984726"], ["id", 5]]
+  [1m[35m (301.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 20:20:05.290342"], ["reset_sent_at", "2000-01-01 20:20:05.288926"], ["id", 5]]
+  [1m[35m (292.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.9ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.9ms)
+UserMailer#password_reset: processed outbound mail in 16.1ms
+Sent mail to admin@adm.com (161.0ms)
+Date: Sat, 23 Sep 2017 23:20:05 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c6c1f5967f7_12922afd9378c754147b7@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c6c1f594f5f_12922afd9378c75414664";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c6c1f594f5f_12922afd9378c75414664
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/9GMA9hWsKEeY8IGdxnbEag/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c6c1f594f5f_12922afd9378c75414664
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/9GMA9hWsKEeY8IGdxnbEag/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c6c1f594f5f_12922afd9378c75414664--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 937ms (ActiveRecord: 597.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:20:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (19.3ms)
+Completed 200 OK in 969ms (Views: 925.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/password_resets/9GMA9hWsKEeY8IGdxnbEag/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-23 23:23:28 +0300
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for PasswordResetsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 23:56:35 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (339.7ms)
+Completed 200 OK in 454ms (Views: 452.4ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:56:40 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76I6E7Zzqre8qC+gGqhxD6X89BpI1A/AFzzeijK3laRoP1nSV5JGKvV6JMm7AwTzb1250KZgf2LzB5U3Plo4Yg==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$rCKa0LhIVn7/QrIx7d./hesqjZhMQ5SitYT1yMq2Rc.iYAdCtOXNG"], ["updated_at", "2017-09-23 20:56:40.472706"], ["id", 5]]
+  [1m[35m (307.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 20:56:40.784931"], ["reset_sent_at", "2000-01-01 20:56:40.784119"], ["id", 5]]
+  [1m[35m (300.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.5ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.9ms)
+UserMailer#password_reset: processed outbound mail in 17.9ms
+Sent mail to admin@adm.com (69.4ms)
+Date: Sat, 23 Sep 2017 23:56:41 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c6ca891c165_12922afd9378c6c814976@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c6ca891ab7f_12922afd9378c6c814873";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c6ca891ab7f_12922afd9378c6c814873
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/jP4hWaTMzc5-uKri_Z4atw/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c6ca891ab7f_12922afd9378c6c814873
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/jP4hWaTMzc5-uKri_Z4atw/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c6ca891ab7f_12922afd9378c6c814873--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 875ms (ActiveRecord: 613.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:56:41 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (15.2ms)
+Completed 200 OK in 96ms (Views: 81.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/password_resets/jP4hWaTMzc5-uKri_Z4atw/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-23 23:56:48 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"jP4hWaTMzc5-uKri_Z4atw"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:41:in `check_expiration'
+Started GET "/password_resets/jP4hWaTMzc5-uKri_Z4atw/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-23 23:57:41 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"jP4hWaTMzc5-uKri_Z4atw"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:41:in `check_expiration'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-23 23:58:15 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 450ms (Views: 438.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-23 23:58:27 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TfMyECviQJy0Vh1u0ylUANLgwAeeC43A1wdJiavP9c/KblHRygOsAf2EFgdygiH8GEGNzXC//WIzPAI0pyJYCQ==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$z1htKW1OhhYkeX.l02mL3.Xm3kwEU/NyGiC5.OAE3qWq8Q4ETeKke"], ["updated_at", "2017-09-23 20:58:28.139015"], ["id", 5]]
+  [1m[35m (216.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 20:58:28.363077"], ["reset_sent_at", "2000-01-01 20:58:28.361815"], ["id", 5]]
+  [1m[35m (343.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.9ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.6ms)
+UserMailer#password_reset: processed outbound mail in 295.6ms
+Sent mail to admin@adm.com (33.4ms)
+Date: Sat, 23 Sep 2017 23:58:29 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c6caf528e92_16142ac8b36a876c8674d@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c6caf52618b_16142ac8b36a876c86675";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c6caf52618b_16142ac8b36a876c86675
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/fNPvJmssWoldrfON2Icm4w/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c6caf52618b_16142ac8b36a876c86675
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/fNPvJmssWoldrfON2Icm4w/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c6caf52618b_16142ac8b36a876c86675--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1215ms (ActiveRecord: 571.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:58:29 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (15.0ms)
+Completed 200 OK in 159ms (Views: 126.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/password_resets/fNPvJmssWoldrfON2Icm4w/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-23 23:58:39 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"fNPvJmssWoldrfON2Icm4w"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:41:in `check_expiration'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-24 00:03:12 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 451ms (Views: 440.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 00:03:19 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XeHe2hxiU6IxhkbJKBwTRuO+XmrFkrXKQLKYR/ytBvrafL0b/YO/P3hUTaCJt2a6KR8ToCsmxWikidP68ECrPA==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$MYu/Qd0Ho5VkheAqOtO4heF.HNsTHZu./3heqFoL.s8Q/j9h/4QWu"], ["updated_at", "2017-09-23 21:03:19.883906"], ["id", 5]]
+  [1m[35m (256.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 21:03:20.145838"], ["reset_sent_at", "2000-01-01 21:03:20.144441"], ["id", 5]]
+  [1m[35m (405.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.8ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.6ms)
+UserMailer#password_reset: processed outbound mail in 173.5ms
+Sent mail to admin@adm.com (25.2ms)
+Date: Sun, 24 Sep 2017 00:03:20 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c6cc18d8462_16f82aed65065770459bd@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c6cc18d6a27_16f82aed65065770458cb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c6cc18d6a27_16f82aed65065770458cb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/CQ5Rut18HqkHf1GG_LvTPw/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c6cc18d6a27_16f82aed65065770458cb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/CQ5Rut18HqkHf1GG_LvTPw/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c6cc18d6a27_16f82aed65065770458cb--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1200ms (ActiveRecord: 666.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 00:03:20 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (14.4ms)
+Completed 200 OK in 133ms (Views: 103.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/password_resets/CQ5Rut18HqkHf1GG_LvTPw/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 00:03:30 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"CQ5Rut18HqkHf1GG_LvTPw"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:41:in `check_expiration'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-24 00:06:25 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 444ms (Views: 432.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 00:06:30 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fg9s+Jf4mKCsRpuQb3hu6Iat3hV8/6Rsp7PeHSTQKfL5kg85dhl0PeWUkPnO0xsUTAyT35JL1M5DiJWgKD2ENA==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$GO3sXFCLTclbCkkWl1I3Du2OIbvuvjCp.vs4WBRi35CF6okHw7OIO"], ["updated_at", "2017-09-23 21:06:30.824547"], ["id", 5]]
+  [1m[35m (282.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-23 21:06:31.110812"], ["reset_sent_at", "2000-01-01 21:06:31.110036"], ["id", 5]]
+  [1m[35m (367.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.9ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.6ms)
+UserMailer#password_reset: processed outbound mail in 273.7ms
+Sent mail to admin@adm.com (26.3ms)
+Date: Sun, 24 Sep 2017 00:06:31 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c6ccd7dd0ff_17e32b2a1cd82a407992d@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c6ccd7db90c_17e32b2a1cd82a40798fc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c6ccd7db90c_17e32b2a1cd82a40798fc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/qKJMG0MO3YE0o8GJu4JQ_w/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c6ccd7db90c_17e32b2a1cd82a40798fc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/qKJMG0MO3YE0o8GJu4JQ_w/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c6ccd7db90c_17e32b2a1cd82a40798fc--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1259ms (ActiveRecord: 652.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 00:06:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (17.6ms)
+Completed 200 OK in 144ms (Views: 120.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/password_resets/qKJMG0MO3YE0o8GJu4JQ_w/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 00:06:35 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"qKJMG0MO3YE0o8GJu4JQ_w"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:41:in `check_expiration'
