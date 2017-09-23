@@ -30,6 +30,7 @@ before_save {self.email = email.downcase}
     end
 
     def authenticated?(remember_token)
+      return flase if remember_digest.nil?
       DCrypt::Password.new(remembre_digest).is_password?(remember_token)
     end
 
