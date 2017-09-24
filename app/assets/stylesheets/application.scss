@@ -40,3 +40,17 @@ body{
     color: red;
   }
 }
+
+.post{
+  margin-bottom: 0.7em;
+  padding: 0.7em 0;
+  border-bottom: 1px solid silver;
+  &h2{
+    margin-bottom: 0;
+  }
+}
+
+.thumb{
+  float: left;
+  margin-right: 1em;
+}

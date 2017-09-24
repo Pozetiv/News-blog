@@ -9653,3 +9653,2907 @@ Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
   
 app/controllers/password_resets_controller.rb:41:in `check_expiration'
+Started GET "/" for 127.0.0.1 at 2017-09-24 11:30:23 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (19.3ms)
+Completed 200 OK in 1228ms (Views: 1162.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-24 11:30:42 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (114.6ms)
+Completed 200 OK in 274ms (Views: 219.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 11:30:50 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUjbYL3iwGZJgW5c/sdFF5pDWnBuSoFbggeA92vCBxP+Tj00Kcvk1fHPadKEPhx9RzZzW7wWwLB6N3OyPe1I9w==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$tLnVP3Y4IK0zhzqHDAkFOOLPo.rrbnNiAc3b6RrqUmbkXCEkdY8Qq"], ["updated_at", "2017-09-24 08:30:50.830871"], ["id", 5]]
+  [1m[35m (353.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-24 08:30:51.189177"], ["reset_sent_at", "2000-01-01 08:30:51.188263"], ["id", 5]]
+  [1m[35m (292.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (2.0ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.0ms)
+UserMailer#password_reset: processed outbound mail in 318.7ms
+Sent mail to admin@adm.com (89.9ms)
+Date: Sun, 24 Sep 2017 11:30:52 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c76d3c52109_b332b0100f6a438650@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c76d3c503e3_b332b0100f6a438575";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c76d3c503e3_b332b0100f6a438575
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/n9xZFJDOZfSWjhKq07muSA/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c76d3c503e3_b332b0100f6a438575
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/n9xZFJDOZfSWjhKq07muSA/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c76d3c503e3_b332b0100f6a438575--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1814ms (ActiveRecord: 650.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 11:30:52 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.7ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/password_resets/n9xZFJDOZfSWjhKq07muSA/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 11:31:15 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"n9xZFJDOZfSWjhKq07muSA"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:41:in `check_expiration'
+Started GET "/password_resets/n9xZFJDOZfSWjhKq07muSA/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 11:41:29 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"n9xZFJDOZfSWjhKq07muSA"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:45:in `check_expiration'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-24 11:42:00 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 21ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_in):
+  
+app/controllers/users_controller.rb:50:in `search_user'
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 11:47:49 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUjbYL3iwGZJgW5c/sdFF5pDWnBuSoFbggeA92vCBxP+Tj00Kcvk1fHPadKEPhx9RzZzW7wWwLB6N3OyPe1I9w==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$DCiCmkI6hMwNqA7yS5JFPuBkxayY.0qdX9slO160tGAdRQPUnncye"], ["updated_at", "2017-09-24 08:47:50.157115"], ["id", 5]]
+  [1m[35m (272.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-24 08:47:50.435974"], ["reset_sent_at", "2000-01-01 08:47:50.434333"], ["id", 5]]
+  [1m[35m (315.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (20.8ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.8ms)
+UserMailer#password_reset: processed outbound mail in 344.3ms
+Sent mail to admin@adm.com (76.7ms)
+Date: Sun, 24 Sep 2017 11:47:51 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c771377f5ec_e022b02006542f86485@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c771377d473_e022b02006542f863d4";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c771377d473_e022b02006542f863d4
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/O6SvRg6PuO7ihYKCK8AzRA/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c771377d473_e022b02006542f863d4
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/O6SvRg6PuO7ihYKCK8AzRA/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c771377d473_e022b02006542f863d4--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1603ms (ActiveRecord: 591.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 11:47:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.0ms)
+Completed 200 OK in 2999ms (Views: 2961.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/password_resets/O6SvRg6PuO7ihYKCK8AzRA/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 11:48:01 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"O6SvRg6PuO7ihYKCK8AzRA"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:45:in `check_expiration'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-24 11:57:00 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (282.2ms)
+Completed 200 OK in 498ms (Views: 461.9ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 11:57:12 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MGmc8eo4uOUhnSXEJPnEcUf1XOxywZH0rjDg07hxPuN3b3qlfhGcVpnTIkpeAJ0bmoB1x6Cd0B9WABOW7l5xBw==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$25hQRuKRUtZfRsTypxW2r.0NmvUnflPVXRU.vcNrND6i1CLKFPQf."], ["updated_at", "2017-09-24 08:57:12.849359"], ["id", 5]]
+  [1m[35m (327.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-24 08:57:13.184112"], ["reset_sent_at", "2000-01-01 08:57:13.182940"], ["id", 5]]
+  [1m[35m (269.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.4ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.6ms)
+UserMailer#password_reset: processed outbound mail in 191.9ms
+Sent mail to admin@adm.com (26.2ms)
+Date: Sun, 24 Sep 2017 11:57:13 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c77369d0c77_f262ac3eb8f19a015665@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c77369cf0e2_f262ac3eb8f19a015520";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c77369cf0e2_f262ac3eb8f19a015520
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/VextEtuKdihiIDJKq59YIA/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c77369cf0e2_f262ac3eb8f19a015520
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/VextEtuKdihiIDJKq59YIA/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c77369cf0e2_f262ac3eb8f19a015520--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1188ms (ActiveRecord: 602.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 11:57:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (26.3ms)
+Completed 200 OK in 453ms (Views: 427.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/password_resets/VextEtuKdihiIDJKq59YIA/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 11:57:21 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"VextEtuKdihiIDJKq59YIA"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_reset_expired?' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:46:in `check_expiration'
+Started GET "/password_resets/VextEtuKdihiIDJKq59YIA/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 11:58:51 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"VextEtuKdihiIDJKq59YIA"}
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 30ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="row">
+    2:   <div class="col-md-6 col-md-offset-3">
+    3:     <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+    4: 
+    5:     <%=hidden_field_tag :email, @user.email %>
+    6: 
+  
+app/views/password_resets/edit.html.erb:3:in `_app_views_password_resets_edit_html_erb___3082550630420564488_69871977682180'
+Started GET "/" for 127.0.0.1 at 2017-09-24 13:22:32 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (217.2ms)
+Completed 200 OK in 1344ms (Views: 911.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-24 13:22:43 +0300
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (282.8ms)
+Completed 200 OK in 436ms (Views: 377.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 13:22:48 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VXmgs4fAe61O8ucymowh+SKaa50Jmq/XVg6h74MlM2JMxvpB7+aEmBiM7w5aQvY0EX6iyji3XMIAAwfX1IqHvw==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$apBBd6/e/dlFkH1UdhvlM.oF8dEr49A0POXiP9MenX5rWXV0FwNK6"], ["updated_at", "2017-09-24 10:22:48.425847"], ["id", 5]]
+  [1m[35m (600.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-24 10:22:49.031098"], ["reset_sent_at", "2000-01-01 10:22:49.030260"], ["id", 5]]
+  [1m[35m (383.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.8ms)
+UserMailer#password_reset: processed outbound mail in 333.8ms
+Sent mail to admin@adm.com (55.5ms)
+Date: Sun, 24 Sep 2017 13:22:50 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c7877a345a2_b182b240da822104069f@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c7877a3299e_b182b240da8221040570";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c7877a3299e_b182b240da8221040570
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/7ZS8663Z5O3F8rPmE55lpw/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c7877a3299e_b182b240da8221040570
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/7ZS8663Z5O3F8rPmE55lpw/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c7877a3299e_b182b240da8221040570--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2070ms (ActiveRecord: 988.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 13:22:50 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.7ms)
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 13:22:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 200 OK in 95ms (Views: 93.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 13:23:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (21.5ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 13:23:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/password_resets/7ZS8663Z5O3F8rPmE55lpw/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 13:23:18 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"7ZS8663Z5O3F8rPmE55lpw"}
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="row">
+    2:   <div class="col-md-6 col-md-offset-3">
+    3:     <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+    4: 
+    5:     <%= hidden_field_tag :email, @user.email %>
+    6: 
+  
+app/views/password_resets/edit.html.erb:3:in `_app_views_password_resets_edit_html_erb__2089585358108038854_69823603675200'
+Started GET "/password_resets/new" for 127.0.0.1 at 2017-09-24 13:37:31 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 369ms (Views: 357.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2017-09-24 13:37:37 +0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fN1+am3aghNqjauYVylmnIm6v5BeROGyfXWGfNTJBgRlYiSYBfx9Jjzzo6SX57FRul52x29pEqcreCBEg2ay2Q==", "password_reset"=>"[FILTERED]", "commit"=>"Send reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$g6zxeOtPQ2njML2.DuT/J.fv7YTPtIYJmrUOl257FzyImqo/8.Rj6"], ["updated_at", "2017-09-24 10:37:37.192747"], ["id", 5]]
+  [1m[35m (261.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-24 10:37:37.458825"], ["reset_sent_at", "2000-01-01 10:37:37.457390"], ["id", 5]]
+  [1m[35m (300.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.9ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.6ms)
+UserMailer#password_reset: processed outbound mail in 273.5ms
+Sent mail to admin@adm.com (24.1ms)
+Date: Sun, 24 Sep 2017 13:37:38 +0300
+From: from@example.com
+To: admin@adm.com
+Message-ID: <59c78af22ea74_d2f2ae262a2b9c097964@roman-Len.mail>
+Subject: Your forgot password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59c78af22cee9_d2f2ae262a2b9c09788c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59c78af22cee9_d2f2ae262a2b9c09788c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi I'm send you massage with link to reset your password. If you want reset click to the link
+http://localhost:3000/password_resets/qKhASkJejyAunMBs_S8gzg/edit?email=admin%40adm.com
+This link will expire in two hours.
+If you didn't request your password to be reset, please ignore this email and your password will stay as it is
+
+----==_mimepart_59c78af22cee9_d2f2ae262a2b9c09788c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h2>Password reset</h2>
+If you want reset your password click to this link
+<a href="http://localhost:3000/password_resets/qKhASkJejyAunMBs_S8gzg/edit?email=admin%40adm.com">Reset password</a>
+<p>This link will expire in two hours.</p>
+ <p> If you didn't request your password to be reset, please ignore this email and your password will stay as it is</p>
+
+  </body>
+</html>
+
+----==_mimepart_59c78af22cee9_d2f2ae262a2b9c09788c--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1180ms (ActiveRecord: 566.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 13:37:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.1ms)
+Completed 200 OK in 107ms (Views: 90.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/password_resets/qKhASkJejyAunMBs_S8gzg/edit?email=admin%40adm.com" for 127.0.0.1 at 2017-09-24 13:37:43 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"admin@adm.com", "id"=>"qKhASkJejyAunMBs_S8gzg"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 83ms (Views: 79.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/password_resets/qKhASkJejyAunMBs_S8gzg" for 127.0.0.1 at 2017-09-24 13:37:55 +0300
+Processing by PasswordResetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z4y67njtfzevMoeSm2xMWXpjJmPYUp9ud5zbCr3ZfvN6tzHVmczQZMj7IZOflurhYHq5fAiXLAXRM0WttTJDow==", "email"=>"admin@adm.com", "user"=>{"password"=>"[FILTERED]", "password_confirnation"=>"[FILTERED]"}, "commit"=>"Update password", "id"=>"qKhASkJejyAunMBs_S8gzg"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password_confirnation' for User.):
+  
+app/controllers/password_resets_controller.rb:26:in `update'
+Started PATCH "/password_resets/qKhASkJejyAunMBs_S8gzg" for 127.0.0.1 at 2017-09-24 13:47:25 +0300
+Processing by PasswordResetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z4y67njtfzevMoeSm2xMWXpjJmPYUp9ud5zbCr3ZfvN6tzHVmczQZMj7IZOflurhYHq5fAiXLAXRM0WttTJDow==", "email"=>"admin@adm.com", "user"=>{"password"=>"[FILTERED]", "password_confirnation"=>"[FILTERED]"}, "commit"=>"Update password", "id"=>"qKhASkJejyAunMBs_S8gzg"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+Unpermitted parameter: :password_confirnation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "admin@adm.com"], ["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$zCdxN7emz2kdApZ1pQ49Z.IzGVDMrX88gvYl6KOLUJ62Te6wOTZhm"], ["updated_at", "2017-09-24 10:47:26.093613"], ["id", 5]]
+  [1m[35m (124.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-09-24 10:47:26.221452"], ["reset_digest", nil], ["id", 5]]
+  [1m[35m (98.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 406ms (ActiveRecord: 225.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-09-24 13:47:26 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (1.3ms)
+Completed 200 OK in 138ms (Views: 104.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/singup" for 127.0.0.1 at 2017-09-24 13:50:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/users
+  Rendered shared/_error_massages.html.erb (0.9ms)
+  Rendered users/_formuser.html.erb (26.4ms)
+  Rendered users/new.html.erb within layouts/users (48.1ms)
+Completed 200 OK in 122ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/singup" for 127.0.0.1 at 2017-09-24 13:51:22 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cROqyZ58Ctj1LXs6PKRkALjC43EpZu6ZdjP4HvWdI3t9ZF2+VOhTm6PLnik+SHNgHuxKsBzi/Z/vHlb31ynujg==", "user"=>{"name"=>"test1", "email"=>"test1234@tst.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "test1234@tst.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "test1"], ["email", "test1234@tst.com"], ["created_at", "2017-09-24 10:51:22.546768"], ["updated_at", "2017-09-24 10:51:22.546768"], ["password_digest", "$2a$10$vDiu4xbPNBUQ/AwyMtpjO.Ps68wNytfELDKRPmbuTS.0tcN2gvoXW"]]
+  [1m[35m (272.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 608ms (ActiveRecord: 274.2ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007f1b366963d0>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/singup" for 127.0.0.1 at 2017-09-24 13:52:43 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cROqyZ58Ctj1LXs6PKRkALjC43EpZu6ZdjP4HvWdI3t9ZF2+VOhTm6PLnik+SHNgHuxKsBzi/Z/vHlb31ynujg==", "user"=>{"name"=>"test1", "email"=>"test1234@tst.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "test1234@tst.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/users
+  Rendered shared/_error_massages.html.erb (0.7ms)
+  Rendered users/_formuser.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/users (5.9ms)
+Completed 200 OK in 270ms (Views: 102.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/singup" for 127.0.0.1 at 2017-09-24 13:53:15 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+7pznS2bBsu7tPK3FA2gx+vVlE9nZ66eg3qZMtikTAHiBSlvRb35/u3K+ovUw3cK2DFdGFZKXYvVdz8Kjwv43A==", "user"=>{"name"=>"test1", "email"=>"test1234@test12334.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "test1234@test12334.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "test1"], ["email", "test1234@test12334.com"], ["created_at", "2017-09-24 10:53:15.328731"], ["updated_at", "2017-09-24 10:53:15.328731"], ["password_digest", "$2a$10$Xs9xh26FFGbZMMFs3/IUpO4WMLyQ.9EKlpok.q5DFMjCXZLTXVdi."]]
+  [1m[35m (235.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/7
+Completed 302 Found in 366ms (ActiveRecord: 236.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-09-24 13:53:15 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/users
+  Rendered users/show.html.erb within layouts/users (0.8ms)
+Completed 200 OK in 86ms (Views: 83.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 19:03:16 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (16.2ms)
+Completed 200 OK in 1335ms (Views: 1246.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 19:03:23 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.6ms)
+Completed 200 OK in 87ms (Views: 64.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 19:12:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.4ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 19:12:22 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.4ms)
+Completed 200 OK in 70ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:12:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2017-09-24 19:12:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (0.9ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:13:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 19:13:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.6ms)
+Completed 200 OK in 89ms (Views: 86.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+Completed 200 OK in 92ms (Views: 90.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.5ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.8ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.1ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.0ms)
+Completed 200 OK in 77ms (Views: 75.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.4ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:22:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:29:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.5ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:32:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:32:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.3ms)
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:32:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:32:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.6ms)
+Completed 200 OK in 75ms (Views: 74.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:32:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.9ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:35:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.5ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:35:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:35:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.1ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:37:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:37:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:37:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.7ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:37:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.0ms)
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:37:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.5ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:40:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+Completed 200 OK in 3764ms (Views: 3762.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:41:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 1888ms (Views: 1887.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:41:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 200 OK in 1963ms (Views: 1959.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:42:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 1924ms (Views: 1922.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:42:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:42:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.1ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:43:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.4ms)
+Completed 200 OK in 112ms (Views: 108.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:43:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 200 OK in 93ms (Views: 91.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:43:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:43:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.9ms)
+Completed 200 OK in 121ms (Views: 118.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:43:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.6ms)
+Completed 200 OK in 110ms (Views: 108.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:43:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.2ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.8ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:47:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 19:49:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.6ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-09-24 19:51:39 +0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (212.5ms)
+  Rendered posts/new.html.erb within layouts/posts (219.9ms)
+Completed 200 OK in 307ms (Views: 289.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-09-24 19:51:46 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nu3Bc03/cpqUdUP2bWVIsAwftZ4G/UBG0VekC+zOAuW09cFyW3tO/t8FEJO5+v9ZEM1KYc7ifY8AuKotZTlLdQ==", "post"=>{"title"=>"4", "body"=>"44"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "4"], ["body", "44"], ["created_at", "2017-09-24 16:51:46.097266"], ["updated_at", "2017-09-24 16:51:46.097266"]]
+  [1m[35m (230.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/posts/9
+Completed 302 Found in 251ms (ActiveRecord: 244.8ms)
+
+
+Started GET "/posts/9" for 127.0.0.1 at 2017-09-24 19:51:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.0ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/9/edit" for 127.0.0.1 at 2017-09-24 19:51:54 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/posts
+  Rendered posts/_form.html.erb (2.8ms)
+  Rendered posts/edit.html.erb within layouts/posts (5.1ms)
+Completed 200 OK in 85ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/posts/9" for 127.0.0.1 at 2017-09-24 19:51:56 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+l9/o4JYak60JHAqK8U4Yhico7bilrj02VlPJKd0JE0rhQZPfQSi5IvEg8IYWjdOQN20FlGqmfeQRT86nte73g==", "id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (301.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/posts/9
+Completed 302 Found in 309ms (ActiveRecord: 304.0ms)
+
+
+Started GET "/posts/9" for 127.0.0.1 at 2017-09-24 19:51:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=9):
+  
+app/controllers/posts_controller.rb:54:in `search_post'
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/posts.8" for 127.0.0.1 at 2017-09-24 19:52:18 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/posts.8"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:24 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.5ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.4ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.1ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:26 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.7ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:26 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:26 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/posts.8" for 127.0.0.1 at 2017-09-24 19:52:30 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/posts.8"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.5ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.6ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2017-09-24 19:52:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:52:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.2ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:52:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (2.9ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:52:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.3ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:52:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:52:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 19:52:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 19:58:06 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.2ms)
+Completed 200 OK in 120ms (Views: 66.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:02:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image?' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'  if @post.image? %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091792102880'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091792102880'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091618549180'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091618549180'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091719745560'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091719745560'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091798303020'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091798303020'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091793827380'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091793827380'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091722677800'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091722677800'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091653247520'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091653247520'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (12.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag @post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091693053300'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091693053300'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091795904040'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091795904040'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091790849540'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091790849540'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091702822960'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091702822960'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091698307400'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091698307400'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091796971780'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091796971780'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091792417140'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091792417140'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091618912740'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091618912740'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:03:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091719539260'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091719539260'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:03:52 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091797858920'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091797858920'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (9.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091793173660'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091793173660'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091620134500'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091620134500'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091720781960'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091720781960'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (9.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091798624560'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091798624560'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091793730320'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091793730320'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091721976780'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091721976780'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (9.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091651919500'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091651919500'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091799179600'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091799179600'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091794271100'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091794271100'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091722688440'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091722688440'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091652614700'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091652614700'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (24.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_47324466235520'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_47324466235520'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (9.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091794617280'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091794617280'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091790041980'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091790041980'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:04:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091653001600'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091653001600'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:05:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_47324478402520'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_47324478402520'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:05:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091794889200'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091794889200'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:05:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091788472380'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091788472380'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:05:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_70091653329260'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_70091653329260'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:05:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2034231842911579309_47324480030000'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2034231842911579309_47324480030000'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:05:19 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (20.8ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section class="clearfix">
+    18:     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail'%>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277360408340'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277360408340'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277359415200'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277359415200'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (11.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277342652140'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277342652140'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277361715260'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277361715260'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (11.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277359416500'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277359416500'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:26 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277363517460'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277363517460'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:27 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277361153380'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277361153380'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:06:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    15:   </small>
+    16: 
+    17:   <section>
+    18:     <%= image_tag  post.image.url(:thumb) %>
+    19:   </section>
+    20:  </article>
+    21: <% end %>
+  
+app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb___2751275138471436042_47277353318980'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___2751275138471436042_47277353318980'
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:07:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+Completed 200 OK in 3005ms (Views: 3003.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+Completed 200 OK in 86ms (Views: 84.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.1ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.7ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.9ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.8ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.4ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:09:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:10:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.0ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:12:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+Completed 200 OK in 2040ms (Views: 2038.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 20:12:52 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (2.1ms)
+Completed 200 OK in 138ms (Views: 111.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:13:29 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 200 OK in 2031ms (Views: 2028.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (19.3ms)
+Completed 200 OK in 144ms (Views: 121.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.1ms)
+Completed 200 OK in 89ms (Views: 82.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.9ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.4ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:10 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.3ms)
+Completed 200 OK in 80ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.9ms)
+Completed 200 OK in 82ms (Views: 80.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:12 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (8.3ms)
+Completed 200 OK in 82ms (Views: 78.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:13 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.5ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.2ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:14 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (9.9ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.1ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:14:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:05 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (13.4ms)
+Completed 200 OK in 455ms (Views: 423.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.7ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.1ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:20 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.2ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:21 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.5ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:22 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.7ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (3.9ms)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.3ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 20:15:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+Completed 200 OK in 86ms (Views: 84.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-09-24 20:16:00 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/posts
+  Rendered posts/show.html.erb within layouts/posts (1.9ms)
+Completed 200 OK in 82ms (Views: 78.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:16:04 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:16:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.8ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:16:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (6.0ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:16:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.4ms)
+Completed 200 OK in 84ms (Views: 82.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:16:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.0ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:19:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (4.0ms)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:20:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  Rendered posts/index.html.erb within layouts/posts (6.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/roman/News-blog/app/views/posts/index.html.erb:16: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+      'btn btn-danger btn-xs');@output_buffer.safe_append='
+                              ^
+/home/roman/News-blog/app/views/posts/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/roman/News-blog/app/views/posts/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/roman/News-blog/app/views/posts/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/posts/index.html.erb:16: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:21:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+Completed 200 OK in 73ms (Views: 71.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:22:01 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/posts (5.9ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:38:47 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 30ms
+
+
+  
+NoMethodError (undefined method `paginata' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:38:49 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 17ms
+
+
+  
+NoMethodError (undefined method `paginata' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:38:49 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `paginata' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:38:50 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+NoMethodError (undefined method `paginata' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:38:59 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 38ms
+
+
+  
+NoMethodError (undefined method `paginat' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:39:01 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+
+  
+NoMethodError (undefined method `paginat' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:39:01 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms
+
+
+  
+NoMethodError (undefined method `paginat' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:39:02 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+
+  
+NoMethodError (undefined method `paginat' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:42:54 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 42ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:42:56 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:42:56 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:42:57 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 16ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:42 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:43 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:44 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:44 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:44 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 17ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:45 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:45 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:46 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:46 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:43:46 +0300
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms
+
+
+  
+NoMethodError (undefined method `paginate' for Post (call 'Post.connection' to establish a connection):Class):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2017-09-24 20:44:24 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (19.0ms)
+Completed 200 OK in 395ms (Views: 369.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:10 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (24.7ms)
+Completed 200 OK in 219ms (Views: 183.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:24 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (3.5ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:50 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (7.2ms)
+Completed 200 OK in 111ms (Views: 108.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:51 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (5.9ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:52 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (7.9ms)
+Completed 200 OK in 111ms (Views: 108.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:52 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (3.9ms)
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:52 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (4.2ms)
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-24 20:55:53 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/users
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/users (3.3ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.4ms)
+
+

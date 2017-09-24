@@ -3,6 +3,10 @@ class UsersController < ApplicationController
  before_action :logged_in_user, only: [:edit, :update]
  before_action :correct_user, only: [:edit, :update]
 
+ def index
+   @users = User.paginate(page: params[:page])
+ end
+
   def show
 
   end
@@ -16,7 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash.now[:success] = "Welcome your are new user "
-      redirect_back_or user
+      redirect_to @user
 
     else
       render 'new'

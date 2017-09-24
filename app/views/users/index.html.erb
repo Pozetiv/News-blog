@@ -1,0 +1,10 @@
+<% provide(:title, "USER LIST") %>
+<h2>List users</h2>
+
+<%= will_paginate @users %>
+
+<% @users.each do |user| %>
+<ul>
+  <li><%= link_to user.name, user_path(user) %></li>
+</ul>
+<% end %>
