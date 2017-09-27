@@ -1,0 +1,2 @@
+class Addposte < ApplicationRecord
+end

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Addposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @addposts.each do |addpost| %>
+      <tr>
+        <td><%= addpost.title %></td>
+        <td><%= addpost.body %></td>
+        <td><%= addpost.text %></td>
+        <td><%= link_to 'Show', addpost %></td>
+        <td><%= link_to 'Edit', edit_addpost_path(addpost) %></td>
+        <td><%= link_to 'Destroy', addpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Addpost', new_addpost_path %>

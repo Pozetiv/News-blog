@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :addposts
   get 'password_resets/new'
 
   get 'passwrod_resets/new'
@@ -18,4 +19,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  resources :contacts, only: [:new, :show, :create]
 end

@@ -1,0 +1,20 @@
+<h2>Form for write massage to administration</h2>
+
+<div class="col-md-6 col-md-offset3">
+  <%= form_for @massage do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name, class: 'form-control' %>
+
+<%= f.label :email %>
+<%= f.email_field :email, class: 'form-control' %>
+
+<%= f.label :title %>
+<%= f.text_field :title, class: 'form-control' %>
+
+<% f.label :body %>
+<%= f.text_area :body, class: 'form-control' %>
+
+<%= f.submit "SEND MASSAGE", class: 'btn btn-primary' %>
+
+<% end %>
+</div>

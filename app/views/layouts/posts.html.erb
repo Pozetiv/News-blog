@@ -22,15 +22,17 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'CREATE NEW POST', new_post_path, class: 'nav-link' %></li>
+        <li><%= link_to 'Offer post', new_addpost_path, class: 'nav-link' %></li>
         <% if logged_in? %>
+            <li><%= link_to 'List offer posts', addpost_path, class: 'nav-link' %></li>
+            <li><%= link_to 'Massage to admins', contact_path, class: 'nav-link' %></li>
             <li><%= link_to 'Log out', logout_path, method: :delete %></li>
             <li><%= link_to 'Profile', user_path(current_user) %></li>
             <% else %>
             <li><%= link_to 'Sing UP', singup_path%></li>
             <li><%= link_to 'Log in', login_path %></li>
             <% end %>
-        <li><a href="#">CONTACT US</a></li>
+        <li><%= link_to 'Contact us', new_contact_path, class: 'nav-link' %></li>
 
       </ul>
     </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170923163146) do
+ActiveRecord::Schema.define(version: 20170923093756) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -28,8 +28,6 @@ ActiveRecord::Schema.define(version: 20170923163146) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin"
-    t.string "reset_digest"
-    t.time "reset_sent_at"
   end
 
 end
