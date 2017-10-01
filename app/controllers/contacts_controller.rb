@@ -1,25 +1,27 @@
 class ContactsController < ApplicationController
 
   def new
-    @massage = Contact.new
+    @contact = Contact.new
   end
 
   def create
-    @massage = Contact.new(contact_params)
-    if @massage.save
-      redirect_to @massage
+    @contact = Contact.new(contact_params)
+    if @contact.save
+      redirect_to @contact
+    else
+      render 'new'
     end
 
   end
 
   def show
-    @massage = Contact.find(params[:id])
+    @contact = Contact.find(params[:id])
   end
 
   private
 
   def contact_params
-    params.require(:contact).permite(:title, :body, :email, :other)
+    params.require(:contact).permit(:title, :body, :email, :other, :name)
   end
 
 end

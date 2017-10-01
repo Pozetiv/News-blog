@@ -15054,3 +15054,947 @@ Migrating to AddResetToUsers (20170923163146)
   [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170923163146"]]
   [1m[35m (103.7ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-01 19:33:10 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddResetToUsers (20170923163146)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_digest" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_sent_at" datatime[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170923163146"]]
+  [1m[35m (241.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateContacts (20170925190941)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (45.9ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "email" varchar, "other" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170925190941"]]
+  [1m[35m (334.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToContacts (20170925193202)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "contacts" ADD "name" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170925193202"]]
+  [1m[35m (409.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAddpostes (20170927174811)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "addpostes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170927174811"]]
+  [1m[35m (665.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAddposts (20170927181730)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "addposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170927181730"]]
+  [1m[35m (331.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-01 19:33:59 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (26.0ms)
+Completed 200 OK in 3592ms (Views: 3524.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:35:49 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 182ms (Views: 148.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:37:06 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:37:07 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:37:07 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:37:08 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:37:08 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:37:08 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:38:40 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 123ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:39:29 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:45:04 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uRxRD2fxVk7djDwwtSHjpv/bA5S5d6j2e+igSeHf53wY8XNmHdBdyv/aZgHZyv4Pq5NVHSGzsxO7pi+BIpjOPA==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permite' for #<ActionController::Parameters:0x007f58289a69d8>
+Did you mean?  permit
+               permit!):
+  
+app/controllers/contacts_controller.rb:22:in `contact_params'
+app/controllers/contacts_controller.rb:8:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-01 19:45:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (20.0ms)
+Completed 200 OK in 419ms (Views: 391.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:45:44 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 108ms (Views: 79.1ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:45:46 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HkQ5WIglUeTpXpVHwwCxPCcMfcN2bpLAsNdXnX97eglLgJ5+HhtLh4zl7v96G4bwMcQJ9msuUkcfa7QvT3YxLw==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:47:32 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 106ms (Views: 76.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:47:35 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7fmhqlZODsTJXxZSofNf7u4ESrOb83gqwVMzlE1BwUSWsTv03gzvzFzJmgmbNDW7/BHo1ar1gVrS8MGknIuRQ==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:51:05 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:51:05 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:51:06 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:51:06 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:51:07 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:51:07 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:51:09 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rYF8PPIyUZRMbeO5lwDApCwCaGH4VSCTbV0iI+R8Y88MbF5ViBNaEG47uYj7690NeEo+6GCRO3atE63rJztKjw==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:53:11 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 104ms (Views: 77.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:53:14 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P2w56QVh5vvySlkvxsGwla9YjycEay7yEw/M6HusvP+egRuAf0Dtf9AcAx6qKq08+xDZrpyvNRfTQUMguOuVvw==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-01 19:53:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (14.1ms)
+Completed 200 OK in 116ms (Views: 104.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:53:39 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 108ms (Views: 106.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:53:42 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5VHWlTWlRxm+3EkweBe4VR7WVPUWKwRXSKIRXj4a+KuwlXGzo5tdettnMojBDI+ZCB4gwAtrxNDnHvLsDhezjQ==", "contact"=>{"name"=>"dadada", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:58:13 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 163ms (Views: 161.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:58:15 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/lHW6XP/jtWangJwIZqHCz3VimiPrEHG5mtLNfDqJxJfvPSACd6FUbjIWEFNcZqiaZ3c4RdoWiMmJcT9M60OUg==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 19:59:43 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (80.8ms)
+Completed 200 OK in 2567ms (Views: 2536.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 19:59:49 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X53/hexQMV+Mj6kaKSuxuC30XL3FP2PGfZJD+X5megr+cN3slnE6267Z8ytFwKwRebwKNF37eCO93MwxvSFTSg==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (27.8ms)[0m  [1m[32mINSERT INTO "contacts" ("title", "body", "email", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["email", ""], ["created_at", "2017-10-01 16:59:49.383344"], ["updated_at", "2017-10-01 16:59:49.383344"], ["name", ""]]
+  [1m[35m (328.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/1
+Completed 302 Found in 369ms (ActiveRecord: 356.8ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2017-10-01 19:59:49 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UnknownFormat (ContactsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/contacts/1" for 127.0.0.1 at 2017-10-01 20:04:04 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 136ms (Views: 133.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2017-10-01 20:06:12 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 129ms (Views: 106.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:06:50 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X53/hexQMV+Mj6kaKSuxuC30XL3FP2PGfZJD+X5megr+cN3slnE6267Z8ytFwKwRebwKNF37eCO93MwxvSFTSg==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "contacts" ("title", "body", "email", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["email", ""], ["created_at", "2017-10-01 17:06:50.812422"], ["updated_at", "2017-10-01 17:06:50.812422"], ["name", ""]]
+  [1m[35m (293.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/2
+Completed 302 Found in 301ms (ActiveRecord: 294.5ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2017-10-01 20:06:51 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:07:01 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X53/hexQMV+Mj6kaKSuxuC30XL3FP2PGfZJD+X5megr+cN3slnE6267Z8ytFwKwRebwKNF37eCO93MwxvSFTSg==", "contact"=>{"name"=>"asdad", "email"=>"", "title"=>"dasdas", "body"=>"adadadadsa"}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "contacts" ("title", "body", "email", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "dasdas"], ["body", "adadadadsa"], ["email", ""], ["created_at", "2017-10-01 17:07:01.004360"], ["updated_at", "2017-10-01 17:07:01.004360"], ["name", "asdad"]]
+  [1m[35m (409.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/3
+Completed 302 Found in 415ms (ActiveRecord: 410.9ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-10-01 20:07:01 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-10-01 20:07:55 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-10-01 20:08:57 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 102ms (Views: 98.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-10-01 20:09:19 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 98ms (Views: 94.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-10-01 20:09:20 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 103ms (Views: 100.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-10-01 20:09:20 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 106ms (Views: 103.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:15:16 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X53/hexQMV+Mj6kaKSuxuC30XL3FP2PGfZJD+X5megr+cN3slnE6267Z8ytFwKwRebwKNF37eCO93MwxvSFTSg==", "contact"=>{"name"=>"", "email"=>"", "title"=>"dasdas", "body"=>"adadadadsa"}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "contacts" ("title", "body", "email", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "dasdas"], ["body", "adadadadsa"], ["email", ""], ["created_at", "2017-10-01 17:15:16.360564"], ["updated_at", "2017-10-01 17:15:16.360564"], ["name", ""]]
+  [1m[35m (97.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/4
+Completed 302 Found in 145ms (ActiveRecord: 104.5ms)
+
+
+Started GET "/contacts/4" for 127.0.0.1 at 2017-10-01 20:15:16 +0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? ORDER BY "contacts"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 90ms (Views: 87.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-01 20:16:21 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (21.1ms)
+Completed 200 OK in 155ms (Views: 133.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 20:16:27 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 134ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-01 20:16:41 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rRzJPHUuMchXdaEArpNpGyqC5CkiVIeKV46GX2hwwEzWCjy8f02AgYJj+SdcBRG78QQ2uV19RMWPQOuLnA8TIQ==", "session"=>{"email"=>"asasd@ya.ru", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asasd@ya.ru"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 210ms (Views: 80.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 20:17:17 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-01 20:17:18 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (14.8ms)
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 20:17:21 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 101ms (Views: 78.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:17:23 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XGdGaLqGipX7gtxWAliHw6DXHUHMDHQhbL4FLgO+ZN0Jo+FOLLiQ9p45p+67Q7APth9pdNFMtKbDAuacM7Mv+w==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_massage' for #<ActiveModel::Errors:0x007f479cbd9ee0>
+Did you mean?  full_message
+               full_messages):
+    2: <% if @contact.errors.any? %>
+    3:     <div class="alert alert-danger">
+    4: 
+    5:       <% @contact.errors.full_massage.each do |msg| %>
+    6:       <%= msg %>
+    7:           <% end %>
+    8:     </div>
+  
+app/views/contacts/new.html.erb:5:in `_app_views_contacts_new_html_erb__3576464738742529152_69972776192200'
+app/controllers/contacts_controller.rb:12:in `create'
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:17:48 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ctnJ3TyrOCbkonOH1280PdJDkFL7miJ/xGo9LTyAD/TTNOu0Roozosb0Kba7hCmUhgvG22NeOZoEJLLl/8cmtA==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_massages' for #<ActiveModel::Errors:0x007f479ecd9b40>
+Did you mean?  full_messages
+               full_message):
+    2: <% if @contact.errors.any? %>
+    3:     <div class="alert alert-danger">
+    4: 
+    5:       <% @contact.errors.full_massages.each do |msg| %>
+    6:       <%= msg %>
+    7:           <% end %>
+    8:     </div>
+  
+app/views/contacts/new.html.erb:5:in `_app_views_contacts_new_html_erb__3576464738742529152_69972791791540'
+app/controllers/contacts_controller.rb:12:in `create'
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:18:10 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ctnJ3TyrOCbkonOH1280PdJDkFL7miJ/xGo9LTyAD/TTNOu0Roozosb0Kba7hCmUhgvG22NeOZoEJLLl/8cmtA==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-10-01 20:18:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:18:58 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ctnJ3TyrOCbkonOH1280PdJDkFL7miJ/xGo9LTyAD/TTNOu0Roozosb0Kba7hCmUhgvG22NeOZoEJLLl/8cmtA==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 78ms (Views: 73.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-10-01 20:20:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 20:20:50 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 99ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-01 20:20:52 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQ9N6vjOexivyR8yCaPrz5qj5N20Q5RJ8ZeAGmqbbquA4m+Dgu9wnI2fRQNlSPZmzuuyVCyHj6wx2Q/SqdxH6w==", "contact"=>{"name"=>"", "email"=>"", "title"=>"", "body"=>""}, "commit"=>"SEND MASSAGE"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 86ms (Views: 80.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-01 20:22:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (19.4ms)
+Completed 200 OK in 126ms (Views: 108.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:22:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (12.4ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:22:37 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (4.1ms)
+  Rendered addposts/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 141ms (Views: 106.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/addposts" for 127.0.0.1 at 2017-10-01 20:24:39 +0300
+Processing by AddpostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MdYnc7Osw47d78fR8LS+d3JcgWrLxtn9r/z02q6RXu+K7YfCDhSrLyu4XJlWFC61372hk4Np9BmFcqDlXSi7Q==", "addpost"=>{"title"=>"", "body"=>"", "text"=>""}, "commit"=>"Offer post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (5.1ms)
+  Rendered addposts/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 95ms (Views: 86.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/addposts" for 127.0.0.1 at 2017-10-01 20:24:56 +0300
+Processing by AddpostsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 20:24:56 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:25:05 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (6.2ms)
+  Rendered addposts/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 103ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:25:06 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (3.6ms)
+  Rendered addposts/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:25:06 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (7.5ms)
+  Rendered addposts/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:25:06 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (3.3ms)
+  Rendered addposts/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:25:07 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered addposts/_form.html.erb (5.2ms)
+  Rendered addposts/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:29:05 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (6.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (12.0ms)
+Completed 200 OK in 95ms (Views: 86.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 20:34:04 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_miniheader.html.erb (1.5ms)
+  Rendered contacts/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 97ms (Views: 81.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-01 20:34:41 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered shared/_miniheader.html.erb (0.9ms)
+  Rendered contacts/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:34:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.0ms)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/addposts/new" for 127.0.0.1 at 2017-10-01 20:35:59 +0300
+Processing by AddpostsController#new as HTML
+  Rendering addposts/new.html.erb within layouts/application
+  Rendered shared/_miniheader.html.erb (0.7ms)
+  Rendered addposts/_form.html.erb (2.9ms)
+  Rendered addposts/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:36:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (6.8ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:38:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.6ms)
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:44:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.7ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:44:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (7.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin?' for nil:NilClass):
+    11:     <time>
+    12:     <%= post.created_at.to_date.strftime("%d %B, %Y") %>
+    13:     </time>
+    14:     <% if current_user.admin? %>
+    15:   <%= link_to 'EDIT', edit_post_path(post), class: 'btn btn-warning btn-xs' %>
+    16:   <%= link_to 'Delete', posts_path(post), method: :delete, data: {confirm: "DELETE??"},
+    17:                                                           class: 'btn btn-danger btn-xs'%>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__1268503861074801137_69972783342820'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb__1268503861074801137_69972783342820'
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:45:03 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (5.6ms)
+Completed 200 OK in 97ms (Views: 95.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 20:45:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 90ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-01 20:45:19 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BUyBwqs9OYVECTGhxUNUMl6+nMcG/lZtyRQU/0ooJuR+WnRCoV6IzJEfaYY31SyShThOV3nXlSIR2nkrvlf1iQ==", "session"=>{"email"=>"admin@adm.com", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 226ms (Views: 77.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-01 20:45:36 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n35YkoTjit7QaECIVXMYsadcNQhan9WQBIO8RO2Za1g+k3r7/sKBWvI+Grk5mAUY8xRjgcJbznXEzTOMLt5CGA==", "session"=>{"email"=>"admin@adm.com", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@adm.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 205ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 20:45:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-10-01 20:45:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/posts
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered posts/index.html.erb within layouts/posts (5.1ms)
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.3ms)
+
+

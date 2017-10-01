@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170923093756) do
+ActiveRecord::Schema.define(version: 20170927181730) do
+
+  create_table "addpostes", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "addposts", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.string "email"
+    t.string "other"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -28,6 +53,8 @@ ActiveRecord::Schema.define(version: 20170923093756) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin"
+    t.string "reset_digest"
+    t.time "reset_sent_at"
   end
 
 end

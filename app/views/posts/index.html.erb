@@ -11,9 +11,11 @@
     <time>
     <%= post.created_at.to_date.strftime("%d %B, %Y") %>
     </time>
+    <% if logged_in? %>
   <%= link_to 'EDIT', edit_post_path(post), class: 'btn btn-warning btn-xs' %>
   <%= link_to 'Delete', posts_path(post), method: :delete, data: {confirm: "DELETE??"},
                                                           class: 'btn btn-danger btn-xs'%>
+        <% end %>
   </small>
 
  </article>
